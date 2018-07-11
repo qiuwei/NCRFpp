@@ -46,6 +46,7 @@ class Alphabet:
 
     def get_index(self, instance):
         try:
+            #print(f"getting {instance} is {self.instance2index[instance]}")   
             return self.instance2index[instance]
         except KeyError:
             if self.keep_growing:

@@ -1,0 +1,83 @@
+Seed num: 42
+MODEL: train
+Training model...
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Tag          scheme: BMES
+     MAX SENTENCE LENGTH: -1
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 1546
+     Char  alphabet size: 1541
+     Label alphabet size: 21
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 100
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: data/data/bieos/train.txt
+     Dev    file directory: data/data/bieos/val.txt
+     Test   file directory: data/data/bieos/test.txt
+     Raw    file directory: None
+     Dset   file directory: None
+     Model  file directory: experiments/lstmcrf_cheng/model
+     Loadmodel   directory: None
+     Decode file directory: None
+     Train instance number: 420
+     Dev   instance number: 90
+     Test  instance number: 90
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: True
+     Model word extractor: LSTM
+     Model       use_char: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: ADAM
+     Iteration: 100
+     BatchSize: 32
+     Average  batch   loss: True
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.2
+     Hyper        lr_decay: 1.0
+     Hyper         HP_clip: 5.0
+     Hyper        momentum: 0.0
+     Hyper              l2: 0.0
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 2
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+build network...
+use_char:  False
+word feature extractor:  LSTM
+use crf:  True
+build word sequence feature extractor: LSTM...
+build word representation...
+build CRF...
+Epoch: 0/100
+     Instance: 420; Time: 57.96s; loss: 56309.9072; acc: 73383.0/163201.0=0.4496
+Epoch: 0 training finished. Time: 57.96s, speed: 7.25st/s,  total loss: 56309.9072265625
+totalloss: 56309.9072265625
+gold_num =  2237  pred_num =  0  right_num =  0
+Dev: time: 1.67s, speed: 54.53st/s; acc: 0.8079, p: -1.0000, r: 0.0000, f: -1.0000
+Exceed previous best f score: -10
+Save current best model in file: experiments/lstmcrf_cheng/model.0.model
+gold_num =  2281  pred_num =  0  right_num =  0
+Test: time: 1.15s, speed: 80.03st/s; acc: 0.8071, p: -1.0000, r: 0.0000, f: -1.0000
+Epoch: 1/100
+     Instance: 420; Time: 58.26s; loss: 82826.7070; acc: 107883.0/163201.0=0.6610
+Epoch: 1 training finished. Time: 58.26s, speed: 7.21st/s,  total loss: 82826.70703125
+totalloss: 82826.70703125
+gold_num =  2237  pred_num =  0  right_num =  0
+Dev: time: 1.82s, speed: 49.96st/s; acc: 0.8079, p: -1.0000, r: 0.0000, f: -1.0000
+gold_num =  2281  pred_num =  0  right_num =  0
+Test: time: 1.63s, speed: 56.50st/s; acc: 0.8071, p: -1.0000, r: 0.0000, f: -1.0000
+Epoch: 2/100

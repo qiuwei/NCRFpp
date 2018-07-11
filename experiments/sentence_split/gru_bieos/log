@@ -1,0 +1,1696 @@
+Seed num: 42
+MODEL: train
+Training model...
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DATA SUMMARY START:
+ I/O:
+     Tag          scheme: BMES
+     MAX SENTENCE LENGTH: -1
+     MAX   WORD   LENGTH: -1
+     Number   normalized: True
+     Word  alphabet size: 1546
+     Char  alphabet size: 1541
+     Label alphabet size: 21
+     Word embedding  dir: None
+     Char embedding  dir: None
+     Word embedding size: 100
+     Char embedding size: 30
+     Norm   word     emb: False
+     Norm   char     emb: False
+     Train  file directory: data/data/bieos_ss/train.txt
+     Dev    file directory: data/data/bieos_ss/val.txt
+     Test   file directory: data/data/bieos_ss/test.txt
+     Raw    file directory: None
+     Dset   file directory: None
+     Model  file directory: experiments/sentence_split/lstmcrf_bieos/model
+     Loadmodel   directory: None
+     Decode file directory: None
+     Train instance number: 2853
+     Dev   instance number: 612
+     Test  instance number: 578
+     Raw   instance number: 0
+     FEATURE num: 0
+ ++++++++++++++++++++++++++++++++++++++++
+ Model Network:
+     Model        use_crf: True
+     Model word extractor: GRU
+     Model       use_char: False
+ ++++++++++++++++++++++++++++++++++++++++
+ Training:
+     Optimizer: ADAM
+     Iteration: 200
+     BatchSize: 128
+     Average  batch   loss: True
+ ++++++++++++++++++++++++++++++++++++++++
+ Hyperparameters:
+     Hyper              lr: 0.015
+     Hyper        lr_decay: 0.005
+     Hyper         HP_clip: None
+     Hyper        momentum: 0.0
+     Hyper              l2: 1e-08
+     Hyper      hidden_dim: 200
+     Hyper         dropout: 0.5
+     Hyper      lstm_layer: 2
+     Hyper          bilstm: True
+     Hyper             GPU: True
+DATA SUMMARY END.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+build network...
+use_char:  False
+word feature extractor:  GRU
+use crf:  True
+build word sequence feature extractor: GRU...
+build word representation...
+build CRF...
+Epoch: 0/200
+     Instance: 2853; Time: 42.95s; loss: 1507.1386; acc: 127518.0/163201.0=0.7814
+Epoch: 0 training finished. Time: 42.95s, speed: 66.42st/s,  total loss: 1507.138584136963
+totalloss: 1507.138584136963
+gold_num =  2237  pred_num =  0  right_num =  0
+Dev: time: 3.25s, speed: 190.61st/s; acc: 0.8079, p: -1.0000, r: 0.0000, f: -1.0000
+Exceed previous best f score: -10
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.0.model
+gold_num =  2281  pred_num =  0  right_num =  0
+Test: time: 3.36s, speed: 173.98st/s; acc: 0.8071, p: -1.0000, r: 0.0000, f: -1.0000
+Epoch: 1/200
+     Instance: 2853; Time: 43.65s; loss: 775.6821; acc: 137040.0/163201.0=0.8397
+Epoch: 1 training finished. Time: 43.65s, speed: 65.36st/s,  total loss: 775.6821308135986
+totalloss: 775.6821308135986
+gold_num =  2237  pred_num =  1948  right_num =  979
+Dev: time: 3.34s, speed: 185.25st/s; acc: 0.8899, p: 0.5026, r: 0.4376, f: 0.4679
+Exceed previous best f score: -1
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.1.model
+gold_num =  2281  pred_num =  1988  right_num =  924
+Test: time: 3.40s, speed: 172.34st/s; acc: 0.8823, p: 0.4648, r: 0.4051, f: 0.4329
+Epoch: 2/200
+     Instance: 2853; Time: 43.84s; loss: 365.5427; acc: 148707.0/163201.0=0.9112
+Epoch: 2 training finished. Time: 43.84s, speed: 65.07st/s,  total loss: 365.5427179336548
+totalloss: 365.5427179336548
+gold_num =  2237  pred_num =  2085  right_num =  1644
+Dev: time: 3.33s, speed: 186.20st/s; acc: 0.9515, p: 0.7885, r: 0.7349, f: 0.7608
+Exceed previous best f score: 0.4678614097968937
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.2.model
+gold_num =  2281  pred_num =  2108  right_num =  1625
+Test: time: 3.20s, speed: 182.41st/s; acc: 0.9450, p: 0.7709, r: 0.7124, f: 0.7405
+Epoch: 3/200
+     Instance: 2853; Time: 44.27s; loss: 200.6644; acc: 154812.0/163201.0=0.9486
+Epoch: 3 training finished. Time: 44.27s, speed: 64.44st/s,  total loss: 200.66438102722168
+totalloss: 200.66438102722168
+gold_num =  2237  pred_num =  2093  right_num =  1797
+Dev: time: 3.35s, speed: 185.26st/s; acc: 0.9617, p: 0.8586, r: 0.8033, f: 0.8300
+Exceed previous best f score: 0.7607589079130033
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.3.model
+gold_num =  2281  pred_num =  2115  right_num =  1779
+Test: time: 3.41s, speed: 172.04st/s; acc: 0.9552, p: 0.8411, r: 0.7799, f: 0.8094
+Epoch: 4/200
+     Instance: 2853; Time: 38.61s; loss: 142.1827; acc: 156973.0/163201.0=0.9618
+Epoch: 4 training finished. Time: 38.61s, speed: 73.88st/s,  total loss: 142.1827368736267
+totalloss: 142.1827368736267
+gold_num =  2237  pred_num =  2238  right_num =  1894
+Dev: time: 3.34s, speed: 185.38st/s; acc: 0.9689, p: 0.8463, r: 0.8467, f: 0.8465
+Exceed previous best f score: 0.8300230946882218
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.4.model
+gold_num =  2281  pred_num =  2261  right_num =  1886
+Test: time: 3.05s, speed: 191.72st/s; acc: 0.9646, p: 0.8341, r: 0.8268, f: 0.8305
+Epoch: 5/200
+     Instance: 2853; Time: 34.52s; loss: 111.6485; acc: 157827.0/163201.0=0.9671
+Epoch: 5 training finished. Time: 34.52s, speed: 82.64st/s,  total loss: 111.64847373962402
+totalloss: 111.64847373962402
+gold_num =  2237  pred_num =  2215  right_num =  1971
+Dev: time: 3.62s, speed: 171.22st/s; acc: 0.9743, p: 0.8898, r: 0.8811, f: 0.8854
+Exceed previous best f score: 0.8464804469273742
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.5.model
+gold_num =  2281  pred_num =  2239  right_num =  1968
+Test: time: 3.82s, speed: 153.35st/s; acc: 0.9691, p: 0.8790, r: 0.8628, f: 0.8708
+Epoch: 6/200
+     Instance: 2853; Time: 24.65s; loss: 90.8353; acc: 158812.0/163201.0=0.9731
+Epoch: 6 training finished. Time: 24.65s, speed: 115.73st/s,  total loss: 90.83533048629761
+totalloss: 90.83533048629761
+gold_num =  2237  pred_num =  2258  right_num =  1984
+Dev: time: 2.10s, speed: 294.55st/s; acc: 0.9738, p: 0.8787, r: 0.8869, f: 0.8828
+gold_num =  2281  pred_num =  2278  right_num =  1989
+Test: time: 2.23s, speed: 261.87st/s; acc: 0.9690, p: 0.8731, r: 0.8720, f: 0.8726
+Epoch: 7/200
+     Instance: 2853; Time: 26.57s; loss: 76.6259; acc: 159249.0/163201.0=0.9758
+Epoch: 7 training finished. Time: 26.57s, speed: 107.39st/s,  total loss: 76.62590324878693
+totalloss: 76.62590324878693
+gold_num =  2237  pred_num =  2205  right_num =  1978
+Dev: time: 3.29s, speed: 188.37st/s; acc: 0.9757, p: 0.8971, r: 0.8842, f: 0.8906
+Exceed previous best f score: 0.8854447439353099
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.7.model
+gold_num =  2281  pred_num =  2224  right_num =  2004
+Test: time: 3.43s, speed: 170.92st/s; acc: 0.9733, p: 0.9011, r: 0.8786, f: 0.8897
+Epoch: 8/200
+     Instance: 2853; Time: 31.29s; loss: 68.1102; acc: 159693.0/163201.0=0.9785
+Epoch: 8 training finished. Time: 31.29s, speed: 91.19st/s,  total loss: 68.11015129089355
+totalloss: 68.11015129089355
+gold_num =  2237  pred_num =  2227  right_num =  1993
+Dev: time: 3.32s, speed: 186.39st/s; acc: 0.9761, p: 0.8949, r: 0.8909, f: 0.8929
+Exceed previous best f score: 0.890589824403422
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.8.model
+gold_num =  2281  pred_num =  2264  right_num =  2017
+Test: time: 3.39s, speed: 173.20st/s; acc: 0.9715, p: 0.8909, r: 0.8843, f: 0.8876
+Epoch: 9/200
+     Instance: 2853; Time: 41.39s; loss: 61.4735; acc: 159698.0/163201.0=0.9785
+Epoch: 9 training finished. Time: 41.39s, speed: 68.93st/s,  total loss: 61.47354793548584
+totalloss: 61.47354793548584
+gold_num =  2237  pred_num =  2223  right_num =  2006
+Dev: time: 3.33s, speed: 186.32st/s; acc: 0.9773, p: 0.9024, r: 0.8967, f: 0.8996
+Exceed previous best f score: 0.8929211469534051
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.9.model
+gold_num =  2281  pred_num =  2261  right_num =  2023
+Test: time: 3.48s, speed: 168.58st/s; acc: 0.9735, p: 0.8947, r: 0.8869, f: 0.8908
+Epoch: 10/200
+     Instance: 2853; Time: 43.19s; loss: 57.3522; acc: 159990.0/163201.0=0.9803
+Epoch: 10 training finished. Time: 43.19s, speed: 66.05st/s,  total loss: 57.352235555648804
+totalloss: 57.352235555648804
+gold_num =  2237  pred_num =  2238  right_num =  2018
+Dev: time: 3.32s, speed: 186.54st/s; acc: 0.9774, p: 0.9017, r: 0.9021, f: 0.9019
+Exceed previous best f score: 0.8995515695067264
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.10.model
+gold_num =  2281  pred_num =  2262  right_num =  2031
+Test: time: 3.38s, speed: 173.42st/s; acc: 0.9731, p: 0.8979, r: 0.8904, f: 0.8941
+Epoch: 11/200
+     Instance: 2853; Time: 42.87s; loss: 54.7749; acc: 159984.0/163201.0=0.9803
+Epoch: 11 training finished. Time: 42.87s, speed: 66.55st/s,  total loss: 54.774876832962036
+totalloss: 54.774876832962036
+gold_num =  2237  pred_num =  2242  right_num =  2016
+Dev: time: 3.31s, speed: 187.54st/s; acc: 0.9760, p: 0.8992, r: 0.9012, f: 0.9002
+gold_num =  2281  pred_num =  2279  right_num =  2022
+Test: time: 2.38s, speed: 245.49st/s; acc: 0.9718, p: 0.8872, r: 0.8865, f: 0.8868
+Epoch: 12/200
+     Instance: 2853; Time: 36.07s; loss: 52.1640; acc: 160191.0/163201.0=0.9816
+Epoch: 12 training finished. Time: 36.07s, speed: 79.10st/s,  total loss: 52.16404104232788
+totalloss: 52.16404104232788
+gold_num =  2237  pred_num =  2244  right_num =  2016
+Dev: time: 2.54s, speed: 242.94st/s; acc: 0.9777, p: 0.8984, r: 0.9012, f: 0.8998
+gold_num =  2281  pred_num =  2272  right_num =  2027
+Test: time: 2.56s, speed: 230.02st/s; acc: 0.9727, p: 0.8922, r: 0.8886, f: 0.8904
+Epoch: 13/200
+     Instance: 2853; Time: 42.98s; loss: 47.4615; acc: 160469.0/163201.0=0.9833
+Epoch: 13 training finished. Time: 42.98s, speed: 66.38st/s,  total loss: 47.461495101451874
+totalloss: 47.461495101451874
+gold_num =  2237  pred_num =  2257  right_num =  2032
+Dev: time: 2.19s, speed: 282.41st/s; acc: 0.9778, p: 0.9003, r: 0.9084, f: 0.9043
+Exceed previous best f score: 0.901899441340782
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.13.model
+gold_num =  2281  pred_num =  2278  right_num =  2048
+Test: time: 2.20s, speed: 266.06st/s; acc: 0.9740, p: 0.8990, r: 0.8979, f: 0.8984
+Epoch: 14/200
+     Instance: 2853; Time: 43.26s; loss: 46.2401; acc: 160502.0/163201.0=0.9835
+Epoch: 14 training finished. Time: 43.26s, speed: 65.94st/s,  total loss: 46.24005389213562
+totalloss: 46.24005389213562
+gold_num =  2237  pred_num =  2241  right_num =  2017
+Dev: time: 3.33s, speed: 186.10st/s; acc: 0.9769, p: 0.9000, r: 0.9017, f: 0.9008
+gold_num =  2281  pred_num =  2264  right_num =  2036
+Test: time: 3.51s, speed: 166.78st/s; acc: 0.9725, p: 0.8993, r: 0.8926, f: 0.8959
+Epoch: 15/200
+     Instance: 2853; Time: 40.89s; loss: 43.8017; acc: 160503.0/163201.0=0.9835
+Epoch: 15 training finished. Time: 40.89s, speed: 69.77st/s,  total loss: 43.80173063278198
+totalloss: 43.80173063278198
+gold_num =  2237  pred_num =  2249  right_num =  2025
+Dev: time: 2.19s, speed: 283.35st/s; acc: 0.9778, p: 0.9004, r: 0.9052, f: 0.9028
+gold_num =  2281  pred_num =  2285  right_num =  2035
+Test: time: 2.18s, speed: 268.42st/s; acc: 0.9724, p: 0.8906, r: 0.8922, f: 0.8914
+Epoch: 16/200
+     Instance: 2853; Time: 46.36s; loss: 43.1962; acc: 160451.0/163201.0=0.9831
+Epoch: 16 training finished. Time: 46.36s, speed: 61.55st/s,  total loss: 43.19620740413666
+totalloss: 43.19620740413666
+gold_num =  2237  pred_num =  2269  right_num =  2018
+Dev: time: 3.34s, speed: 185.61st/s; acc: 0.9756, p: 0.8894, r: 0.9021, f: 0.8957
+gold_num =  2281  pred_num =  2284  right_num =  2039
+Test: time: 3.39s, speed: 172.85st/s; acc: 0.9733, p: 0.8927, r: 0.8939, f: 0.8933
+Epoch: 17/200
+     Instance: 2853; Time: 45.20s; loss: 40.6414; acc: 160624.0/163201.0=0.9842
+Epoch: 17 training finished. Time: 45.20s, speed: 63.12st/s,  total loss: 40.64138877391815
+totalloss: 40.64138877391815
+gold_num =  2237  pred_num =  2233  right_num =  2028
+Dev: time: 2.21s, speed: 280.08st/s; acc: 0.9773, p: 0.9082, r: 0.9066, f: 0.9074
+Exceed previous best f score: 0.9043168669336893
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.17.model
+gold_num =  2281  pred_num =  2262  right_num =  2050
+Test: time: 2.65s, speed: 221.47st/s; acc: 0.9751, p: 0.9063, r: 0.8987, f: 0.9025
+Epoch: 18/200
+     Instance: 2853; Time: 43.49s; loss: 40.4565; acc: 160543.0/163201.0=0.9837
+Epoch: 18 training finished. Time: 43.49s, speed: 65.60st/s,  total loss: 40.456464648246765
+totalloss: 40.456464648246765
+gold_num =  2237  pred_num =  2222  right_num =  2026
+Dev: time: 3.34s, speed: 185.73st/s; acc: 0.9779, p: 0.9118, r: 0.9057, f: 0.9087
+Exceed previous best f score: 0.9073825503355705
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.18.model
+gold_num =  2281  pred_num =  2225  right_num =  2033
+Test: time: 3.34s, speed: 175.85st/s; acc: 0.9745, p: 0.9137, r: 0.8913, f: 0.9024
+Epoch: 19/200
+     Instance: 2853; Time: 40.89s; loss: 38.1332; acc: 160630.0/163201.0=0.9842
+Epoch: 19 training finished. Time: 40.89s, speed: 69.77st/s,  total loss: 38.133222460746765
+totalloss: 38.133222460746765
+gold_num =  2237  pred_num =  2259  right_num =  2016
+Dev: time: 2.20s, speed: 281.13st/s; acc: 0.9764, p: 0.8924, r: 0.9012, f: 0.8968
+gold_num =  2281  pred_num =  2289  right_num =  2044
+Test: time: 2.19s, speed: 266.72st/s; acc: 0.9721, p: 0.8930, r: 0.8961, f: 0.8945
+Epoch: 20/200
+     Instance: 2853; Time: 43.78s; loss: 39.8933; acc: 160633.0/163201.0=0.9843
+Epoch: 20 training finished. Time: 43.78s, speed: 65.17st/s,  total loss: 39.8933048248291
+totalloss: 39.8933048248291
+gold_num =  2237  pred_num =  2220  right_num =  2026
+Dev: time: 3.35s, speed: 185.01st/s; acc: 0.9786, p: 0.9126, r: 0.9057, f: 0.9091
+Exceed previous best f score: 0.9087239291320923
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.20.model
+gold_num =  2281  pred_num =  2247  right_num =  2032
+Test: time: 2.71s, speed: 216.72st/s; acc: 0.9734, p: 0.9043, r: 0.8908, f: 0.8975
+Epoch: 21/200
+     Instance: 2853; Time: 41.16s; loss: 41.6257; acc: 160400.0/163201.0=0.9828
+Epoch: 21 training finished. Time: 41.16s, speed: 69.32st/s,  total loss: 41.625717639923096
+totalloss: 41.625717639923096
+gold_num =  2237  pred_num =  2224  right_num =  2029
+Dev: time: 2.19s, speed: 282.29st/s; acc: 0.9787, p: 0.9123, r: 0.9070, f: 0.9097
+Exceed previous best f score: 0.9091317029391969
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.21.model
+gold_num =  2281  pred_num =  2260  right_num =  2051
+Test: time: 2.24s, speed: 261.25st/s; acc: 0.9747, p: 0.9075, r: 0.8992, f: 0.9033
+Epoch: 22/200
+     Instance: 2853; Time: 41.62s; loss: 38.5842; acc: 160537.0/163201.0=0.9837
+Epoch: 22 training finished. Time: 41.62s, speed: 68.55st/s,  total loss: 38.58419394493103
+totalloss: 38.58419394493103
+gold_num =  2237  pred_num =  2230  right_num =  2012
+Dev: time: 3.34s, speed: 185.94st/s; acc: 0.9771, p: 0.9022, r: 0.8994, f: 0.9008
+gold_num =  2281  pred_num =  2249  right_num =  2021
+Test: time: 3.31s, speed: 176.64st/s; acc: 0.9726, p: 0.8986, r: 0.8860, f: 0.8923
+Epoch: 23/200
+     Instance: 2853; Time: 42.39s; loss: 36.6194; acc: 160729.0/163201.0=0.9849
+Epoch: 23 training finished. Time: 42.39s, speed: 67.31st/s,  total loss: 36.619396448135376
+totalloss: 36.619396448135376
+gold_num =  2237  pred_num =  2255  right_num =  2021
+Dev: time: 2.41s, speed: 256.49st/s; acc: 0.9766, p: 0.8962, r: 0.9034, f: 0.8998
+gold_num =  2281  pred_num =  2269  right_num =  2045
+Test: time: 2.30s, speed: 253.76st/s; acc: 0.9741, p: 0.9013, r: 0.8965, f: 0.8989
+Epoch: 24/200
+     Instance: 2853; Time: 38.69s; loss: 37.2095; acc: 160557.0/163201.0=0.9838
+Epoch: 24 training finished. Time: 38.69s, speed: 73.74st/s,  total loss: 37.20945203304291
+totalloss: 37.20945203304291
+gold_num =  2237  pred_num =  2254  right_num =  2036
+Dev: time: 3.33s, speed: 186.26st/s; acc: 0.9784, p: 0.9033, r: 0.9101, f: 0.9067
+gold_num =  2281  pred_num =  2260  right_num =  2039
+Test: time: 3.41s, speed: 170.93st/s; acc: 0.9737, p: 0.9022, r: 0.8939, f: 0.8980
+Epoch: 25/200
+     Instance: 2853; Time: 41.31s; loss: 33.7672; acc: 160745.0/163201.0=0.9850
+Epoch: 25 training finished. Time: 41.31s, speed: 69.07st/s,  total loss: 33.76715832948685
+totalloss: 33.76715832948685
+gold_num =  2237  pred_num =  2238  right_num =  2025
+Dev: time: 3.37s, speed: 183.86st/s; acc: 0.9777, p: 0.9048, r: 0.9052, f: 0.9050
+gold_num =  2281  pred_num =  2260  right_num =  2051
+Test: time: 3.38s, speed: 172.96st/s; acc: 0.9747, p: 0.9075, r: 0.8992, f: 0.9033
+Epoch: 26/200
+     Instance: 2853; Time: 43.13s; loss: 37.4741; acc: 160461.0/163201.0=0.9832
+Epoch: 26 training finished. Time: 43.13s, speed: 66.15st/s,  total loss: 37.47414255142212
+totalloss: 37.47414255142212
+gold_num =  2237  pred_num =  2262  right_num =  2018
+Dev: time: 2.71s, speed: 230.21st/s; acc: 0.9772, p: 0.8921, r: 0.9021, f: 0.8971
+gold_num =  2281  pred_num =  2283  right_num =  2053
+Test: time: 5.05s, speed: 115.58st/s; acc: 0.9750, p: 0.8993, r: 0.9000, f: 0.8996
+Epoch: 27/200
+     Instance: 2853; Time: 44.96s; loss: 37.1713; acc: 160416.0/163201.0=0.9829
+Epoch: 27 training finished. Time: 44.96s, speed: 63.45st/s,  total loss: 37.17131578922272
+totalloss: 37.17131578922272
+gold_num =  2237  pred_num =  2248  right_num =  2032
+Dev: time: 2.52s, speed: 246.07st/s; acc: 0.9783, p: 0.9039, r: 0.9084, f: 0.9061
+gold_num =  2281  pred_num =  2266  right_num =  2050
+Test: time: 2.71s, speed: 215.52st/s; acc: 0.9740, p: 0.9047, r: 0.8987, f: 0.9017
+Epoch: 28/200
+     Instance: 2853; Time: 38.96s; loss: 38.2467; acc: 160635.0/163201.0=0.9843
+Epoch: 28 training finished. Time: 38.96s, speed: 73.23st/s,  total loss: 38.246739625930786
+totalloss: 38.246739625930786
+gold_num =  2237  pred_num =  2263  right_num =  2040
+Dev: time: 3.35s, speed: 185.22st/s; acc: 0.9789, p: 0.9015, r: 0.9119, f: 0.9067
+gold_num =  2281  pred_num =  2285  right_num =  2051
+Test: time: 3.36s, speed: 174.14st/s; acc: 0.9731, p: 0.8976, r: 0.8992, f: 0.8984
+Epoch: 29/200
+     Instance: 2853; Time: 43.51s; loss: 36.3382; acc: 160634.0/163201.0=0.9843
+Epoch: 29 training finished. Time: 43.52s, speed: 65.56st/s,  total loss: 36.33821892738342
+totalloss: 36.33821892738342
+gold_num =  2237  pred_num =  2285  right_num =  2033
+Dev: time: 3.35s, speed: 184.94st/s; acc: 0.9758, p: 0.8897, r: 0.9088, f: 0.8992
+gold_num =  2281  pred_num =  2294  right_num =  2045
+Test: time: 2.81s, speed: 207.84st/s; acc: 0.9725, p: 0.8915, r: 0.8965, f: 0.8940
+Epoch: 30/200
+     Instance: 2853; Time: 41.51s; loss: 36.7614; acc: 160606.0/163201.0=0.9841
+Epoch: 30 training finished. Time: 41.51s, speed: 68.72st/s,  total loss: 36.76137661933899
+totalloss: 36.76137661933899
+gold_num =  2237  pred_num =  2267  right_num =  2032
+Dev: time: 3.35s, speed: 184.99st/s; acc: 0.9781, p: 0.8963, r: 0.9084, f: 0.9023
+gold_num =  2281  pred_num =  2287  right_num =  2055
+Test: time: 3.56s, speed: 164.63st/s; acc: 0.9742, p: 0.8986, r: 0.9009, f: 0.8997
+Epoch: 31/200
+     Instance: 2853; Time: 40.82s; loss: 36.8856; acc: 160501.0/163201.0=0.9835
+Epoch: 31 training finished. Time: 40.82s, speed: 69.89st/s,  total loss: 36.88559293746948
+totalloss: 36.88559293746948
+gold_num =  2237  pred_num =  2260  right_num =  2020
+Dev: time: 2.39s, speed: 260.27st/s; acc: 0.9763, p: 0.8938, r: 0.9030, f: 0.8984
+gold_num =  2281  pred_num =  2269  right_num =  2038
+Test: time: 3.22s, speed: 181.03st/s; acc: 0.9716, p: 0.8982, r: 0.8935, f: 0.8958
+Epoch: 32/200
+     Instance: 2853; Time: 42.83s; loss: 36.8866; acc: 160294.0/163201.0=0.9822
+Epoch: 32 training finished. Time: 42.83s, speed: 66.62st/s,  total loss: 36.886608242988586
+totalloss: 36.886608242988586
+gold_num =  2237  pred_num =  2258  right_num =  2033
+Dev: time: 3.35s, speed: 185.09st/s; acc: 0.9782, p: 0.9004, r: 0.9088, f: 0.9046
+gold_num =  2281  pred_num =  2281  right_num =  2051
+Test: time: 3.44s, speed: 170.36st/s; acc: 0.9740, p: 0.8992, r: 0.8992, f: 0.8992
+Epoch: 33/200
+     Instance: 2853; Time: 40.40s; loss: 34.9232; acc: 160759.0/163201.0=0.9850
+Epoch: 33 training finished. Time: 40.40s, speed: 70.63st/s,  total loss: 34.92320132255554
+totalloss: 34.92320132255554
+gold_num =  2237  pred_num =  2244  right_num =  2019
+Dev: time: 3.33s, speed: 186.19st/s; acc: 0.9772, p: 0.8997, r: 0.9025, f: 0.9011
+gold_num =  2281  pred_num =  2275  right_num =  2052
+Test: time: 3.22s, speed: 180.85st/s; acc: 0.9746, p: 0.9020, r: 0.8996, f: 0.9008
+Epoch: 34/200
+     Instance: 2853; Time: 42.90s; loss: 35.3744; acc: 160634.0/163201.0=0.9843
+Epoch: 34 training finished. Time: 42.90s, speed: 66.51st/s,  total loss: 35.37441277503967
+totalloss: 35.37441277503967
+gold_num =  2237  pred_num =  2272  right_num =  2029
+Dev: time: 2.87s, speed: 216.79st/s; acc: 0.9767, p: 0.8930, r: 0.9070, f: 0.9000
+gold_num =  2281  pred_num =  2302  right_num =  2054
+Test: time: 3.35s, speed: 174.84st/s; acc: 0.9731, p: 0.8923, r: 0.9005, f: 0.8964
+Epoch: 35/200
+     Instance: 2853; Time: 43.21s; loss: 37.1146; acc: 160364.0/163201.0=0.9826
+Epoch: 35 training finished. Time: 43.21s, speed: 66.02st/s,  total loss: 37.11458611488342
+totalloss: 37.11458611488342
+gold_num =  2237  pred_num =  2273  right_num =  2039
+Dev: time: 3.03s, speed: 205.03st/s; acc: 0.9774, p: 0.8971, r: 0.9115, f: 0.9042
+gold_num =  2281  pred_num =  2306  right_num =  2054
+Test: time: 3.08s, speed: 189.52st/s; acc: 0.9737, p: 0.8907, r: 0.9005, f: 0.8956
+Epoch: 36/200
+     Instance: 2853; Time: 39.50s; loss: 35.6972; acc: 160501.0/163201.0=0.9835
+Epoch: 36 training finished. Time: 39.50s, speed: 72.22st/s,  total loss: 35.69718563556671
+totalloss: 35.69718563556671
+gold_num =  2237  pred_num =  2248  right_num =  2043
+Dev: time: 3.23s, speed: 192.04st/s; acc: 0.9789, p: 0.9088, r: 0.9133, f: 0.9110
+Exceed previous best f score: 0.9096615108720018
+Save current best model in file: experiments/sentence_split/lstmcrf_bieos/model.36.model
+gold_num =  2281  pred_num =  2274  right_num =  2030
+Test: time: 3.38s, speed: 173.52st/s; acc: 0.9731, p: 0.8927, r: 0.8900, f: 0.8913
+Epoch: 37/200
+     Instance: 2853; Time: 43.45s; loss: 34.8474; acc: 160540.0/163201.0=0.9837
+Epoch: 37 training finished. Time: 43.45s, speed: 65.66st/s,  total loss: 34.84740138053894
+totalloss: 34.84740138053894
+gold_num =  2237  pred_num =  2255  right_num =  2021
+Dev: time: 2.26s, speed: 274.25st/s; acc: 0.9767, p: 0.8962, r: 0.9034, f: 0.8998
+gold_num =  2281  pred_num =  2278  right_num =  2042
+Test: time: 2.42s, speed: 243.21st/s; acc: 0.9721, p: 0.8964, r: 0.8952, f: 0.8958
+Epoch: 38/200
+     Instance: 2853; Time: 42.26s; loss: 36.7054; acc: 160396.0/163201.0=0.9828
+Epoch: 38 training finished. Time: 42.26s, speed: 67.51st/s,  total loss: 36.70537757873535
+totalloss: 36.70537757873535
+gold_num =  2237  pred_num =  2246  right_num =  2012
+Dev: time: 3.35s, speed: 185.02st/s; acc: 0.9763, p: 0.8958, r: 0.8994, f: 0.8976
+gold_num =  2281  pred_num =  2268  right_num =  2040
+Test: time: 2.58s, speed: 226.83st/s; acc: 0.9741, p: 0.8995, r: 0.8943, f: 0.8969
+Epoch: 39/200
+     Instance: 2853; Time: 41.67s; loss: 39.0099; acc: 160181.0/163201.0=0.9815
+Epoch: 39 training finished. Time: 41.67s, speed: 68.47st/s,  total loss: 39.00987374782562
+totalloss: 39.00987374782562
+gold_num =  2237  pred_num =  2233  right_num =  2001
+Dev: time: 3.33s, speed: 186.15st/s; acc: 0.9750, p: 0.8961, r: 0.8945, f: 0.8953
+gold_num =  2281  pred_num =  2254  right_num =  2037
+Test: time: 3.38s, speed: 173.21st/s; acc: 0.9733, p: 0.9037, r: 0.8930, f: 0.8983
+Epoch: 40/200
+     Instance: 2853; Time: 42.14s; loss: 38.1811; acc: 160103.0/163201.0=0.9810
+Epoch: 40 training finished. Time: 42.14s, speed: 67.71st/s,  total loss: 38.181132555007935
+totalloss: 38.181132555007935
+gold_num =  2237  pred_num =  2232  right_num =  2012
+Dev: time: 3.33s, speed: 186.17st/s; acc: 0.9774, p: 0.9014, r: 0.8994, f: 0.9004
+gold_num =  2281  pred_num =  2280  right_num =  2041
+Test: time: 3.42s, speed: 171.28st/s; acc: 0.9730, p: 0.8952, r: 0.8948, f: 0.8950
+Epoch: 41/200
+     Instance: 2853; Time: 41.71s; loss: 49.1385; acc: 159354.0/163201.0=0.9764
+Epoch: 41 training finished. Time: 41.71s, speed: 68.40st/s,  total loss: 49.138460874557495
+totalloss: 49.138460874557495
+gold_num =  2237  pred_num =  2264  right_num =  1963
+Dev: time: 2.95s, speed: 210.46st/s; acc: 0.9694, p: 0.8670, r: 0.8775, f: 0.8723
+gold_num =  2281  pred_num =  2285  right_num =  1956
+Test: time: 3.47s, speed: 168.52st/s; acc: 0.9641, p: 0.8560, r: 0.8575, f: 0.8568
+Epoch: 42/200
+     Instance: 2853; Time: 40.05s; loss: 97.0681; acc: 155746.0/163201.0=0.9543
+Epoch: 42 training finished. Time: 40.05s, speed: 71.23st/s,  total loss: 97.0681381225586
+totalloss: 97.0681381225586
+gold_num =  2237  pred_num =  2201  right_num =  1889
+Dev: time: 3.36s, speed: 184.64st/s; acc: 0.9642, p: 0.8582, r: 0.8444, f: 0.8513
+gold_num =  2281  pred_num =  2223  right_num =  1904
+Test: time: 3.37s, speed: 173.82st/s; acc: 0.9613, p: 0.8565, r: 0.8347, f: 0.8455
+Epoch: 43/200
+     Instance: 2853; Time: 40.47s; loss: 113.9375; acc: 153856.0/163201.0=0.9427
+Epoch: 43 training finished. Time: 40.47s, speed: 70.50st/s,  total loss: 113.93752670288086
+totalloss: 113.93752670288086
+gold_num =  2237  pred_num =  2265  right_num =  1901
+Dev: time: 2.33s, speed: 266.35st/s; acc: 0.9636, p: 0.8393, r: 0.8498, f: 0.8445
+gold_num =  2281  pred_num =  2296  right_num =  1928
+Test: time: 2.33s, speed: 250.46st/s; acc: 0.9587, p: 0.8397, r: 0.8452, f: 0.8425
+Epoch: 44/200
+     Instance: 2853; Time: 34.35s; loss: 112.5889; acc: 153792.0/163201.0=0.9423
+Epoch: 44 training finished. Time: 34.35s, speed: 83.07st/s,  total loss: 112.58888387680054
+totalloss: 112.58888387680054
+gold_num =  2237  pred_num =  2222  right_num =  1902
+Dev: time: 2.09s, speed: 296.12st/s; acc: 0.9650, p: 0.8560, r: 0.8502, f: 0.8531
+gold_num =  2281  pred_num =  2284  right_num =  1938
+Test: time: 2.23s, speed: 263.73st/s; acc: 0.9601, p: 0.8485, r: 0.8496, f: 0.8491
+Epoch: 45/200
+     Instance: 2853; Time: 29.66s; loss: 108.6742; acc: 153901.0/163201.0=0.9430
+Epoch: 45 training finished. Time: 29.66s, speed: 96.20st/s,  total loss: 108.67423629760742
+totalloss: 108.67423629760742
+gold_num =  2237  pred_num =  2242  right_num =  1861
+Dev: time: 3.29s, speed: 188.33st/s; acc: 0.9567, p: 0.8301, r: 0.8319, f: 0.8310
+gold_num =  2281  pred_num =  2288  right_num =  1889
+Test: time: 3.34s, speed: 175.43st/s; acc: 0.9512, p: 0.8256, r: 0.8281, f: 0.8269
+Epoch: 46/200
+     Instance: 2853; Time: 29.01s; loss: 108.7803; acc: 154088.0/163201.0=0.9442
+Epoch: 46 training finished. Time: 29.01s, speed: 98.35st/s,  total loss: 108.78028440475464
+totalloss: 108.78028440475464
+gold_num =  2237  pred_num =  2225  right_num =  1936
+Dev: time: 2.11s, speed: 293.23st/s; acc: 0.9682, p: 0.8701, r: 0.8654, f: 0.8678
+gold_num =  2281  pred_num =  2260  right_num =  1941
+Test: time: 2.27s, speed: 257.39st/s; acc: 0.9637, p: 0.8588, r: 0.8509, f: 0.8549
+Epoch: 47/200
+     Instance: 2853; Time: 24.84s; loss: 108.3821; acc: 154041.0/163201.0=0.9439
+Epoch: 47 training finished. Time: 24.84s, speed: 114.86st/s,  total loss: 108.38214874267578
+totalloss: 108.38214874267578
+gold_num =  2237  pred_num =  2187  right_num =  1903
+Dev: time: 2.09s, speed: 296.91st/s; acc: 0.9679, p: 0.8701, r: 0.8507, f: 0.8603
+gold_num =  2281  pred_num =  2228  right_num =  1922
+Test: time: 2.36s, speed: 249.50st/s; acc: 0.9634, p: 0.8627, r: 0.8426, f: 0.8525
+Epoch: 48/200
+     Instance: 2853; Time: 24.13s; loss: 102.8738; acc: 154531.0/163201.0=0.9469
+Epoch: 48 training finished. Time: 24.13s, speed: 118.23st/s,  total loss: 102.87376070022583
+totalloss: 102.87376070022583
+gold_num =  2237  pred_num =  2175  right_num =  1916
+Dev: time: 2.11s, speed: 293.89st/s; acc: 0.9665, p: 0.8809, r: 0.8565, f: 0.8685
+gold_num =  2281  pred_num =  2208  right_num =  1921
+Test: time: 2.28s, speed: 256.74st/s; acc: 0.9622, p: 0.8700, r: 0.8422, f: 0.8559
+Epoch: 49/200
+     Instance: 2853; Time: 27.41s; loss: 99.9509; acc: 154489.0/163201.0=0.9466
+Epoch: 49 training finished. Time: 27.41s, speed: 104.08st/s,  total loss: 99.95085287094116
+totalloss: 99.95085287094116
+gold_num =  2237  pred_num =  2183  right_num =  1930
+Dev: time: 3.29s, speed: 188.27st/s; acc: 0.9690, p: 0.8841, r: 0.8628, f: 0.8733
+gold_num =  2281  pred_num =  2214  right_num =  1936
+Test: time: 3.35s, speed: 174.86st/s; acc: 0.9652, p: 0.8744, r: 0.8488, f: 0.8614
+Epoch: 50/200
+     Instance: 2853; Time: 28.54s; loss: 96.6677; acc: 154645.0/163201.0=0.9476
+Epoch: 50 training finished. Time: 28.54s, speed: 99.98st/s,  total loss: 96.66770887374878
+totalloss: 96.66770887374878
+gold_num =  2237  pred_num =  2171  right_num =  1904
+Dev: time: 2.09s, speed: 296.79st/s; acc: 0.9673, p: 0.8770, r: 0.8511, f: 0.8639
+gold_num =  2281  pred_num =  2225  right_num =  1930
+Test: time: 2.14s, speed: 273.21st/s; acc: 0.9644, p: 0.8674, r: 0.8461, f: 0.8566
+Epoch: 51/200
+     Instance: 2853; Time: 28.42s; loss: 95.4342; acc: 154794.0/163201.0=0.9485
+Epoch: 51 training finished. Time: 28.42s, speed: 100.37st/s,  total loss: 95.43423295021057
+totalloss: 95.43423295021057
+gold_num =  2237  pred_num =  2209  right_num =  1946
+Dev: time: 3.29s, speed: 188.40st/s; acc: 0.9706, p: 0.8809, r: 0.8699, f: 0.8754
+gold_num =  2281  pred_num =  2241  right_num =  1957
+Test: time: 3.42s, speed: 171.10st/s; acc: 0.9657, p: 0.8733, r: 0.8580, f: 0.8655
+Epoch: 52/200
+     Instance: 2853; Time: 26.17s; loss: 98.4944; acc: 154584.0/163201.0=0.9472
+Epoch: 52 training finished. Time: 26.17s, speed: 109.02st/s,  total loss: 98.49444198608398
+totalloss: 98.49444198608398
+gold_num =  2237  pred_num =  2181  right_num =  1874
+Dev: time: 2.10s, speed: 294.49st/s; acc: 0.9650, p: 0.8592, r: 0.8377, f: 0.8483
+gold_num =  2281  pred_num =  2225  right_num =  1909
+Test: time: 2.28s, speed: 256.81st/s; acc: 0.9613, p: 0.8580, r: 0.8369, f: 0.8473
+Epoch: 53/200
+     Instance: 2853; Time: 23.84s; loss: 100.1153; acc: 154709.0/163201.0=0.9480
+Epoch: 53 training finished. Time: 23.84s, speed: 119.69st/s,  total loss: 100.11528873443604
+totalloss: 100.11528873443604
+gold_num =  2237  pred_num =  2244  right_num =  1940
+Dev: time: 2.10s, speed: 294.97st/s; acc: 0.9688, p: 0.8645, r: 0.8672, f: 0.8659
+gold_num =  2281  pred_num =  2288  right_num =  1944
+Test: time: 2.23s, speed: 261.91st/s; acc: 0.9634, p: 0.8497, r: 0.8523, f: 0.8510
+Epoch: 54/200
+     Instance: 2853; Time: 26.45s; loss: 95.7981; acc: 154738.0/163201.0=0.9481
+Epoch: 54 training finished. Time: 26.45s, speed: 107.88st/s,  total loss: 95.79812955856323
+totalloss: 95.79812955856323
+gold_num =  2237  pred_num =  2228  right_num =  1927
+Dev: time: 3.30s, speed: 187.74st/s; acc: 0.9687, p: 0.8649, r: 0.8614, f: 0.8632
+gold_num =  2281  pred_num =  2283  right_num =  1947
+Test: time: 3.38s, speed: 173.33st/s; acc: 0.9640, p: 0.8528, r: 0.8536, f: 0.8532
+Epoch: 55/200
+     Instance: 2853; Time: 29.29s; loss: 93.3010; acc: 155072.0/163201.0=0.9502
+Epoch: 55 training finished. Time: 29.29s, speed: 97.40st/s,  total loss: 93.30098819732666
+totalloss: 93.30098819732666
+gold_num =  2237  pred_num =  2225  right_num =  1922
+Dev: time: 3.30s, speed: 187.94st/s; acc: 0.9662, p: 0.8638, r: 0.8592, f: 0.8615
+gold_num =  2281  pred_num =  2263  right_num =  1929
+Test: time: 3.15s, speed: 185.20st/s; acc: 0.9626, p: 0.8524, r: 0.8457, f: 0.8490
+Epoch: 56/200
+     Instance: 2853; Time: 26.36s; loss: 92.1117; acc: 154871.0/163201.0=0.9490
+Epoch: 56 training finished. Time: 26.36s, speed: 108.23st/s,  total loss: 92.11165237426758
+totalloss: 92.11165237426758
+gold_num =  2237  pred_num =  2262  right_num =  1935
+Dev: time: 2.09s, speed: 296.39st/s; acc: 0.9671, p: 0.8554, r: 0.8650, f: 0.8602
+gold_num =  2281  pred_num =  2282  right_num =  1950
+Test: time: 2.22s, speed: 263.85st/s; acc: 0.9639, p: 0.8545, r: 0.8549, f: 0.8547
+Epoch: 57/200
+     Instance: 2853; Time: 27.30s; loss: 92.6412; acc: 154859.0/163201.0=0.9489
+Epoch: 57 training finished. Time: 27.30s, speed: 104.51st/s,  total loss: 92.64117932319641
+totalloss: 92.64117932319641
+gold_num =  2237  pred_num =  2246  right_num =  1947
+Dev: time: 3.29s, speed: 188.39st/s; acc: 0.9695, p: 0.8669, r: 0.8704, f: 0.8686
+gold_num =  2281  pred_num =  2292  right_num =  1935
+Test: time: 3.34s, speed: 175.21st/s; acc: 0.9624, p: 0.8442, r: 0.8483, f: 0.8463
+Epoch: 58/200
+     Instance: 2853; Time: 30.37s; loss: 96.8712; acc: 154607.0/163201.0=0.9473
+Epoch: 58 training finished. Time: 30.37s, speed: 93.95st/s,  total loss: 96.87115144729614
+totalloss: 96.87115144729614
+gold_num =  2237  pred_num =  2201  right_num =  1946
+Dev: time: 3.30s, speed: 188.08st/s; acc: 0.9704, p: 0.8841, r: 0.8699, f: 0.8770
+gold_num =  2281  pred_num =  2220  right_num =  1937
+Test: time: 3.49s, speed: 167.85st/s; acc: 0.9642, p: 0.8725, r: 0.8492, f: 0.8607
+Epoch: 59/200
+     Instance: 2853; Time: 29.79s; loss: 92.0687; acc: 154930.0/163201.0=0.9493
+Epoch: 59 training finished. Time: 29.79s, speed: 95.76st/s,  total loss: 92.06866407394409
+totalloss: 92.06866407394409
+gold_num =  2237  pred_num =  2214  right_num =  1937
+Dev: time: 2.08s, speed: 297.43st/s; acc: 0.9697, p: 0.8749, r: 0.8659, f: 0.8704
+gold_num =  2281  pred_num =  2254  right_num =  1931
+Test: time: 2.09s, speed: 280.10st/s; acc: 0.9616, p: 0.8567, r: 0.8466, f: 0.8516
+Epoch: 60/200
+     Instance: 2853; Time: 30.58s; loss: 92.0186; acc: 154769.0/163201.0=0.9483
+Epoch: 60 training finished. Time: 30.58s, speed: 93.30st/s,  total loss: 92.01864385604858
+totalloss: 92.01864385604858
+gold_num =  2237  pred_num =  2184  right_num =  1928
+Dev: time: 3.29s, speed: 188.22st/s; acc: 0.9694, p: 0.8828, r: 0.8619, f: 0.8722
+gold_num =  2281  pred_num =  2219  right_num =  1944
+Test: time: 3.33s, speed: 175.65st/s; acc: 0.9650, p: 0.8761, r: 0.8523, f: 0.8640
+Epoch: 61/200
+     Instance: 2853; Time: 30.13s; loss: 94.7085; acc: 154399.0/163201.0=0.9461
+Epoch: 61 training finished. Time: 30.13s, speed: 94.68st/s,  total loss: 94.70850467681885
+totalloss: 94.70850467681885
+gold_num =  2237  pred_num =  2153  right_num =  1889
+Dev: time: 3.30s, speed: 187.84st/s; acc: 0.9667, p: 0.8774, r: 0.8444, f: 0.8606
+gold_num =  2281  pred_num =  2174  right_num =  1897
+Test: time: 3.37s, speed: 173.70st/s; acc: 0.9611, p: 0.8726, r: 0.8317, f: 0.8516
+Epoch: 62/200
+     Instance: 2853; Time: 24.61s; loss: 98.4824; acc: 154299.0/163201.0=0.9455
+Epoch: 62 training finished. Time: 24.61s, speed: 115.93st/s,  total loss: 98.48244190216064
+totalloss: 98.48244190216064
+gold_num =  2237  pred_num =  2200  right_num =  1925
+Dev: time: 2.08s, speed: 297.57st/s; acc: 0.9663, p: 0.8750, r: 0.8605, f: 0.8677
+gold_num =  2281  pred_num =  2234  right_num =  1902
+Test: time: 2.33s, speed: 250.97st/s; acc: 0.9591, p: 0.8514, r: 0.8338, f: 0.8425
+Epoch: 63/200
+     Instance: 2853; Time: 23.87s; loss: 108.1788; acc: 153202.0/163201.0=0.9387
+Epoch: 63 training finished. Time: 23.87s, speed: 119.53st/s,  total loss: 108.17875981330872
+totalloss: 108.17875981330872
+gold_num =  2237  pred_num =  2207  right_num =  1899
+Dev: time: 2.12s, speed: 292.87st/s; acc: 0.9643, p: 0.8604, r: 0.8489, f: 0.8546
+gold_num =  2281  pred_num =  2245  right_num =  1918
+Test: time: 2.23s, speed: 262.24st/s; acc: 0.9597, p: 0.8543, r: 0.8409, f: 0.8475
+Epoch: 64/200
+     Instance: 2853; Time: 22.92s; loss: 115.8286; acc: 152233.0/163201.0=0.9328
+Epoch: 64 training finished. Time: 22.92s, speed: 124.50st/s,  total loss: 115.82857942581177
+totalloss: 115.82857942581177
+gold_num =  2237  pred_num =  2218  right_num =  1889
+Dev: time: 2.31s, speed: 267.47st/s; acc: 0.9638, p: 0.8517, r: 0.8444, f: 0.8480
+gold_num =  2281  pred_num =  2249  right_num =  1872
+Test: time: 2.29s, speed: 254.69st/s; acc: 0.9544, p: 0.8324, r: 0.8207, f: 0.8265
+Epoch: 65/200
+     Instance: 2853; Time: 24.10s; loss: 117.2050; acc: 152235.0/163201.0=0.9328
+Epoch: 65 training finished. Time: 24.10s, speed: 118.38st/s,  total loss: 117.20500993728638
+totalloss: 117.20500993728638
+gold_num =  2237  pred_num =  2213  right_num =  1863
+Dev: time: 2.10s, speed: 294.65st/s; acc: 0.9626, p: 0.8418, r: 0.8328, f: 0.8373
+gold_num =  2281  pred_num =  2271  right_num =  1887
+Test: time: 2.20s, speed: 265.33st/s; acc: 0.9566, p: 0.8309, r: 0.8273, f: 0.8291
+Epoch: 66/200
+     Instance: 2853; Time: 25.54s; loss: 119.9697; acc: 151659.0/163201.0=0.9293
+Epoch: 66 training finished. Time: 25.54s, speed: 111.72st/s,  total loss: 119.96968460083008
+totalloss: 119.96968460083008
+gold_num =  2237  pred_num =  2127  right_num =  1826
+Dev: time: 3.32s, speed: 186.81st/s; acc: 0.9627, p: 0.8585, r: 0.8163, f: 0.8368
+gold_num =  2281  pred_num =  2187  right_num =  1879
+Test: time: 3.34s, speed: 175.45st/s; acc: 0.9582, p: 0.8592, r: 0.8238, f: 0.8411
+Epoch: 67/200
+     Instance: 2853; Time: 29.57s; loss: 122.8489; acc: 151542.0/163201.0=0.9286
+Epoch: 67 training finished. Time: 29.57s, speed: 96.50st/s,  total loss: 122.84887456893921
+totalloss: 122.84887456893921
+gold_num =  2237  pred_num =  2217  right_num =  1814
+Dev: time: 3.30s, speed: 187.90st/s; acc: 0.9541, p: 0.8182, r: 0.8109, f: 0.8145
+gold_num =  2281  pred_num =  2273  right_num =  1835
+Test: time: 3.37s, speed: 173.66st/s; acc: 0.9464, p: 0.8073, r: 0.8045, f: 0.8059
+Epoch: 68/200
+     Instance: 2853; Time: 29.57s; loss: 126.1449; acc: 151495.0/163201.0=0.9283
+Epoch: 68 training finished. Time: 29.57s, speed: 96.48st/s,  total loss: 126.1448745727539
+totalloss: 126.1448745727539
+gold_num =  2237  pred_num =  2184  right_num =  1838
+Dev: time: 2.09s, speed: 295.92st/s; acc: 0.9601, p: 0.8416, r: 0.8216, f: 0.8315
+gold_num =  2281  pred_num =  2213  right_num =  1830
+Test: time: 2.11s, speed: 277.17st/s; acc: 0.9530, p: 0.8269, r: 0.8023, f: 0.8144
+Epoch: 69/200
+     Instance: 2853; Time: 24.21s; loss: 136.0692; acc: 150590.0/163201.0=0.9227
+Epoch: 69 training finished. Time: 24.21s, speed: 117.85st/s,  total loss: 136.06924200057983
+totalloss: 136.06924200057983
+gold_num =  2237  pred_num =  2212  right_num =  1822
+Dev: time: 3.28s, speed: 189.04st/s; acc: 0.9558, p: 0.8237, r: 0.8145, f: 0.8191
+gold_num =  2281  pred_num =  2231  right_num =  1823
+Test: time: 3.31s, speed: 176.57st/s; acc: 0.9474, p: 0.8171, r: 0.7992, f: 0.8081
+Epoch: 70/200
+     Instance: 2853; Time: 30.61s; loss: 124.7669; acc: 151365.0/163201.0=0.9275
+Epoch: 70 training finished. Time: 30.61s, speed: 93.20st/s,  total loss: 124.76687288284302
+totalloss: 124.76687288284302
+gold_num =  2237  pred_num =  2255  right_num =  1856
+Dev: time: 3.33s, speed: 186.03st/s; acc: 0.9597, p: 0.8231, r: 0.8297, f: 0.8264
+gold_num =  2281  pred_num =  2271  right_num =  1854
+Test: time: 3.45s, speed: 169.68st/s; acc: 0.9517, p: 0.8164, r: 0.8128, f: 0.8146
+Epoch: 71/200
+     Instance: 2853; Time: 28.45s; loss: 131.4676; acc: 151021.0/163201.0=0.9254
+Epoch: 71 training finished. Time: 28.45s, speed: 100.30st/s,  total loss: 131.46758651733398
+totalloss: 131.46758651733398
+gold_num =  2237  pred_num =  2224  right_num =  1791
+Dev: time: 2.10s, speed: 295.50st/s; acc: 0.9547, p: 0.8053, r: 0.8006, f: 0.8030
+gold_num =  2281  pred_num =  2260  right_num =  1814
+Test: time: 2.12s, speed: 276.35st/s; acc: 0.9496, p: 0.8027, r: 0.7953, f: 0.7989
+Epoch: 72/200
+     Instance: 2853; Time: 27.06s; loss: 130.3040; acc: 151352.0/163201.0=0.9274
+Epoch: 72 training finished. Time: 27.06s, speed: 105.41st/s,  total loss: 130.304030418396
+totalloss: 130.304030418396
+gold_num =  2237  pred_num =  2172  right_num =  1835
+Dev: time: 3.31s, speed: 187.60st/s; acc: 0.9597, p: 0.8448, r: 0.8203, f: 0.8324
+gold_num =  2281  pred_num =  2187  right_num =  1819
+Test: time: 3.39s, speed: 173.00st/s; acc: 0.9528, p: 0.8317, r: 0.7975, f: 0.8142
+Epoch: 73/200
+     Instance: 2853; Time: 29.52s; loss: 122.2779; acc: 151704.0/163201.0=0.9296
+Epoch: 73 training finished. Time: 29.52s, speed: 96.65st/s,  total loss: 122.27790307998657
+totalloss: 122.27790307998657
+gold_num =  2237  pred_num =  2158  right_num =  1814
+Dev: time: 3.30s, speed: 188.02st/s; acc: 0.9593, p: 0.8406, r: 0.8109, f: 0.8255
+gold_num =  2281  pred_num =  2192  right_num =  1816
+Test: time: 3.33s, speed: 176.00st/s; acc: 0.9532, p: 0.8285, r: 0.7961, f: 0.8120
+Epoch: 74/200
+     Instance: 2853; Time: 27.62s; loss: 135.8268; acc: 150756.0/163201.0=0.9237
+Epoch: 74 training finished. Time: 27.62s, speed: 103.30st/s,  total loss: 135.8267683982849
+totalloss: 135.8267683982849
+gold_num =  2237  pred_num =  2145  right_num =  1771
+Dev: time: 2.09s, speed: 296.07st/s; acc: 0.9543, p: 0.8256, r: 0.7917, f: 0.8083
+gold_num =  2281  pred_num =  2166  right_num =  1785
+Test: time: 2.22s, speed: 263.35st/s; acc: 0.9473, p: 0.8241, r: 0.7826, f: 0.8028
+Epoch: 75/200
+     Instance: 2853; Time: 28.60s; loss: 137.9316; acc: 150283.0/163201.0=0.9208
+Epoch: 75 training finished. Time: 28.60s, speed: 99.75st/s,  total loss: 137.93159198760986
+totalloss: 137.93159198760986
+gold_num =  2237  pred_num =  2145  right_num =  1757
+Dev: time: 3.30s, speed: 187.84st/s; acc: 0.9539, p: 0.8191, r: 0.7854, f: 0.8019
+gold_num =  2281  pred_num =  2154  right_num =  1787
+Test: time: 3.40s, speed: 171.89st/s; acc: 0.9506, p: 0.8296, r: 0.7834, f: 0.8059
+Epoch: 76/200
+     Instance: 2853; Time: 28.78s; loss: 137.6619; acc: 150466.0/163201.0=0.9220
+Epoch: 76 training finished. Time: 28.78s, speed: 99.13st/s,  total loss: 137.66192054748535
+totalloss: 137.66192054748535
+gold_num =  2237  pred_num =  2123  right_num =  1790
+Dev: time: 3.29s, speed: 188.24st/s; acc: 0.9572, p: 0.8431, r: 0.8002, f: 0.8211
+gold_num =  2281  pred_num =  2151  right_num =  1784
+Test: time: 3.33s, speed: 175.88st/s; acc: 0.9486, p: 0.8294, r: 0.7821, f: 0.8051
+Epoch: 77/200
+     Instance: 2853; Time: 26.48s; loss: 135.7921; acc: 150378.0/163201.0=0.9214
+Epoch: 77 training finished. Time: 26.48s, speed: 107.76st/s,  total loss: 135.7920699119568
+totalloss: 135.7920699119568
+gold_num =  2237  pred_num =  2179  right_num =  1782
+Dev: time: 2.09s, speed: 297.00st/s; acc: 0.9550, p: 0.8178, r: 0.7966, f: 0.8071
+gold_num =  2281  pred_num =  2177  right_num =  1771
+Test: time: 2.21s, speed: 264.93st/s; acc: 0.9478, p: 0.8135, r: 0.7764, f: 0.7945
+Epoch: 78/200
+     Instance: 2853; Time: 29.77s; loss: 141.6064; acc: 149573.0/163201.0=0.9165
+Epoch: 78 training finished. Time: 29.77s, speed: 95.84st/s,  total loss: 141.6064167022705
+totalloss: 141.6064167022705
+gold_num =  2237  pred_num =  2147  right_num =  1750
+Dev: time: 3.29s, speed: 188.22st/s; acc: 0.9511, p: 0.8151, r: 0.7823, f: 0.7984
+gold_num =  2281  pred_num =  2161  right_num =  1771
+Test: time: 3.31s, speed: 176.76st/s; acc: 0.9465, p: 0.8195, r: 0.7764, f: 0.7974
+Epoch: 79/200
+     Instance: 2853; Time: 31.10s; loss: 146.5165; acc: 149397.0/163201.0=0.9154
+Epoch: 79 training finished. Time: 31.11s, speed: 91.72st/s,  total loss: 146.51649856567383
+totalloss: 146.51649856567383
+gold_num =  2237  pred_num =  2143  right_num =  1777
+Dev: time: 2.13s, speed: 290.98st/s; acc: 0.9549, p: 0.8292, r: 0.7944, f: 0.8114
+gold_num =  2281  pred_num =  2162  right_num =  1792
+Test: time: 2.57s, speed: 228.36st/s; acc: 0.9482, p: 0.8289, r: 0.7856, f: 0.8067
+Epoch: 80/200
+     Instance: 2853; Time: 26.79s; loss: 144.7668; acc: 149492.0/163201.0=0.9160
+Epoch: 80 training finished. Time: 26.79s, speed: 106.50st/s,  total loss: 144.76680850982666
+totalloss: 144.76680850982666
+gold_num =  2237  pred_num =  2176  right_num =  1771
+Dev: time: 2.06s, speed: 300.23st/s; acc: 0.9520, p: 0.8139, r: 0.7917, f: 0.8026
+gold_num =  2281  pred_num =  2188  right_num =  1753
+Test: time: 2.28s, speed: 255.85st/s; acc: 0.9444, p: 0.8012, r: 0.7685, f: 0.7845
+Epoch: 81/200
+     Instance: 2853; Time: 29.62s; loss: 155.3803; acc: 148814.0/163201.0=0.9118
+Epoch: 81 training finished. Time: 29.62s, speed: 96.31st/s,  total loss: 155.38029384613037
+totalloss: 155.38029384613037
+gold_num =  2237  pred_num =  2146  right_num =  1751
+Dev: time: 3.30s, speed: 188.01st/s; acc: 0.9527, p: 0.8159, r: 0.7827, f: 0.7990
+gold_num =  2281  pred_num =  2137  right_num =  1744
+Test: time: 3.34s, speed: 175.08st/s; acc: 0.9456, p: 0.8161, r: 0.7646, f: 0.7895
+Epoch: 82/200
+     Instance: 2853; Time: 29.41s; loss: 155.8208; acc: 148350.0/163201.0=0.9090
+Epoch: 82 training finished. Time: 29.41s, speed: 97.01st/s,  total loss: 155.82081842422485
+totalloss: 155.82081842422485
+gold_num =  2237  pred_num =  2060  right_num =  1694
+Dev: time: 3.30s, speed: 187.87st/s; acc: 0.9481, p: 0.8223, r: 0.7573, f: 0.7885
+gold_num =  2281  pred_num =  2077  right_num =  1685
+Test: time: 3.36s, speed: 174.36st/s; acc: 0.9396, p: 0.8113, r: 0.7387, f: 0.7733
+Epoch: 83/200
+     Instance: 2853; Time: 24.88s; loss: 159.3555; acc: 147824.0/163201.0=0.9058
+Epoch: 83 training finished. Time: 24.88s, speed: 114.65st/s,  total loss: 159.355544090271
+totalloss: 159.355544090271
+gold_num =  2237  pred_num =  2052  right_num =  1742
+Dev: time: 2.11s, speed: 293.68st/s; acc: 0.9503, p: 0.8489, r: 0.7787, f: 0.8123
+gold_num =  2281  pred_num =  2050  right_num =  1682
+Test: time: 2.31s, speed: 253.36st/s; acc: 0.9403, p: 0.8205, r: 0.7374, f: 0.7767
+Epoch: 84/200
+     Instance: 2853; Time: 24.20s; loss: 165.2718; acc: 147531.0/163201.0=0.9040
+Epoch: 84 training finished. Time: 24.20s, speed: 117.91st/s,  total loss: 165.27175998687744
+totalloss: 165.27175998687744
+gold_num =  2237  pred_num =  2072  right_num =  1681
+Dev: time: 2.13s, speed: 291.22st/s; acc: 0.9463, p: 0.8113, r: 0.7515, f: 0.7802
+gold_num =  2281  pred_num =  2125  right_num =  1701
+Test: time: 2.46s, speed: 238.61st/s; acc: 0.9433, p: 0.8005, r: 0.7457, f: 0.7721
+Epoch: 85/200
+     Instance: 2853; Time: 30.36s; loss: 162.0329; acc: 148203.0/163201.0=0.9081
+Epoch: 85 training finished. Time: 30.36s, speed: 93.97st/s,  total loss: 162.03290700912476
+totalloss: 162.03290700912476
+gold_num =  2237  pred_num =  2114  right_num =  1703
+Dev: time: 3.29s, speed: 188.77st/s; acc: 0.9484, p: 0.8056, r: 0.7613, f: 0.7828
+gold_num =  2281  pred_num =  2151  right_num =  1690
+Test: time: 3.37s, speed: 173.76st/s; acc: 0.9429, p: 0.7857, r: 0.7409, f: 0.7626
+Epoch: 86/200
+     Instance: 2853; Time: 25.93s; loss: 162.0553; acc: 148150.0/163201.0=0.9078
+Epoch: 86 training finished. Time: 25.93s, speed: 110.04st/s,  total loss: 162.05531787872314
+totalloss: 162.05531787872314
+gold_num =  2237  pred_num =  2072  right_num =  1720
+Dev: time: 2.08s, speed: 297.17st/s; acc: 0.9496, p: 0.8301, r: 0.7689, f: 0.7983
+gold_num =  2281  pred_num =  2091  right_num =  1705
+Test: time: 2.23s, speed: 261.62st/s; acc: 0.9418, p: 0.8154, r: 0.7475, f: 0.7800
+Epoch: 87/200
+     Instance: 2853; Time: 23.75s; loss: 162.9875; acc: 147716.0/163201.0=0.9051
+Epoch: 87 training finished. Time: 23.75s, speed: 120.14st/s,  total loss: 162.9875283241272
+totalloss: 162.9875283241272
+gold_num =  2237  pred_num =  2110  right_num =  1727
+Dev: time: 2.10s, speed: 294.58st/s; acc: 0.9498, p: 0.8185, r: 0.7720, f: 0.7946
+gold_num =  2281  pred_num =  2135  right_num =  1704
+Test: time: 2.27s, speed: 257.48st/s; acc: 0.9415, p: 0.7981, r: 0.7470, f: 0.7717
+Epoch: 88/200
+     Instance: 2853; Time: 31.02s; loss: 162.0150; acc: 148115.0/163201.0=0.9076
+Epoch: 88 training finished. Time: 31.02s, speed: 91.98st/s,  total loss: 162.01499366760254
+totalloss: 162.01499366760254
+gold_num =  2237  pred_num =  2082  right_num =  1682
+Dev: time: 3.42s, speed: 181.40st/s; acc: 0.9448, p: 0.8079, r: 0.7519, f: 0.7789
+gold_num =  2281  pred_num =  2086  right_num =  1680
+Test: time: 3.49s, speed: 167.85st/s; acc: 0.9412, p: 0.8054, r: 0.7365, f: 0.7694
+Epoch: 89/200
+     Instance: 2853; Time: 42.20s; loss: 168.1120; acc: 147832.0/163201.0=0.9058
+Epoch: 89 training finished. Time: 42.20s, speed: 67.61st/s,  total loss: 168.11199569702148
+totalloss: 168.11199569702148
+gold_num =  2237  pred_num =  2057  right_num =  1687
+Dev: time: 2.37s, speed: 261.30st/s; acc: 0.9469, p: 0.8201, r: 0.7541, f: 0.7857
+gold_num =  2281  pred_num =  2108  right_num =  1676
+Test: time: 2.38s, speed: 244.99st/s; acc: 0.9404, p: 0.7951, r: 0.7348, f: 0.7637
+Epoch: 90/200
+     Instance: 2853; Time: 42.55s; loss: 163.9039; acc: 147848.0/163201.0=0.9059
+Epoch: 90 training finished. Time: 42.55s, speed: 67.05st/s,  total loss: 163.90391492843628
+totalloss: 163.90391492843628
+gold_num =  2237  pred_num =  2073  right_num =  1698
+Dev: time: 3.36s, speed: 184.44st/s; acc: 0.9493, p: 0.8191, r: 0.7591, f: 0.7879
+gold_num =  2281  pred_num =  2086  right_num =  1678
+Test: time: 3.36s, speed: 174.26st/s; acc: 0.9431, p: 0.8044, r: 0.7356, f: 0.7685
+Epoch: 91/200
+     Instance: 2853; Time: 43.63s; loss: 162.4340; acc: 147803.0/163201.0=0.9057
+Epoch: 91 training finished. Time: 43.63s, speed: 65.38st/s,  total loss: 162.43402767181396
+totalloss: 162.43402767181396
+gold_num =  2237  pred_num =  2099  right_num =  1694
+Dev: time: 2.47s, speed: 249.91st/s; acc: 0.9466, p: 0.8071, r: 0.7573, f: 0.7814
+gold_num =  2281  pred_num =  2146  right_num =  1680
+Test: time: 2.35s, speed: 248.75st/s; acc: 0.9389, p: 0.7829, r: 0.7365, f: 0.7590
+Epoch: 92/200
+     Instance: 2853; Time: 41.85s; loss: 162.3784; acc: 148162.0/163201.0=0.9078
+Epoch: 92 training finished. Time: 41.85s, speed: 68.17st/s,  total loss: 162.37838506698608
+totalloss: 162.37838506698608
+gold_num =  2237  pred_num =  2058  right_num =  1645
+Dev: time: 2.42s, speed: 255.27st/s; acc: 0.9426, p: 0.7993, r: 0.7354, f: 0.7660
+gold_num =  2281  pred_num =  2135  right_num =  1681
+Test: time: 2.39s, speed: 244.48st/s; acc: 0.9392, p: 0.7874, r: 0.7370, f: 0.7613
+Epoch: 93/200
+     Instance: 2853; Time: 41.89s; loss: 165.6528; acc: 147553.0/163201.0=0.9041
+Epoch: 93 training finished. Time: 41.89s, speed: 68.11st/s,  total loss: 165.65275526046753
+totalloss: 165.65275526046753
+gold_num =  2237  pred_num =  1985  right_num =  1657
+Dev: time: 2.28s, speed: 271.65st/s; acc: 0.9447, p: 0.8348, r: 0.7407, f: 0.7849
+gold_num =  2281  pred_num =  2036  right_num =  1658
+Test: time: 2.33s, speed: 250.39st/s; acc: 0.9378, p: 0.8143, r: 0.7269, f: 0.7681
+Epoch: 94/200
+     Instance: 2853; Time: 43.31s; loss: 162.4108; acc: 147980.0/163201.0=0.9067
+Epoch: 94 training finished. Time: 43.31s, speed: 65.88st/s,  total loss: 162.41081857681274
+totalloss: 162.41081857681274
+gold_num =  2237  pred_num =  2123  right_num =  1709
+Dev: time: 3.36s, speed: 184.83st/s; acc: 0.9463, p: 0.8050, r: 0.7640, f: 0.7839
+gold_num =  2281  pred_num =  2174  right_num =  1703
+Test: time: 3.51s, speed: 166.85st/s; acc: 0.9381, p: 0.7833, r: 0.7466, f: 0.7645
+Epoch: 95/200
+     Instance: 2853; Time: 42.97s; loss: 163.2735; acc: 147657.0/163201.0=0.9048
+Epoch: 95 training finished. Time: 42.97s, speed: 66.39st/s,  total loss: 163.27348279953003
+totalloss: 163.27348279953003
+gold_num =  2237  pred_num =  2042  right_num =  1635
+Dev: time: 2.28s, speed: 272.45st/s; acc: 0.9429, p: 0.8007, r: 0.7309, f: 0.7642
+gold_num =  2281  pred_num =  2036  right_num =  1635
+Test: time: 3.24s, speed: 180.99st/s; acc: 0.9389, p: 0.8030, r: 0.7168, f: 0.7575
+Epoch: 96/200
+     Instance: 2853; Time: 43.71s; loss: 160.5930; acc: 148228.0/163201.0=0.9083
+Epoch: 96 training finished. Time: 43.71s, speed: 65.28st/s,  total loss: 160.5930299758911
+totalloss: 160.5930299758911
+gold_num =  2237  pred_num =  2073  right_num =  1678
+Dev: time: 2.27s, speed: 272.70st/s; acc: 0.9469, p: 0.8095, r: 0.7501, f: 0.7787
+gold_num =  2281  pred_num =  2094  right_num =  1650
+Test: time: 2.49s, speed: 234.38st/s; acc: 0.9378, p: 0.7880, r: 0.7234, f: 0.7543
+Epoch: 97/200
+     Instance: 2853; Time: 40.26s; loss: 165.4216; acc: 147727.0/163201.0=0.9052
+Epoch: 97 training finished. Time: 40.26s, speed: 70.87st/s,  total loss: 165.4215750694275
+totalloss: 165.4215750694275
+gold_num =  2237  pred_num =  2081  right_num =  1677
+Dev: time: 2.19s, speed: 282.14st/s; acc: 0.9467, p: 0.8059, r: 0.7497, f: 0.7767
+gold_num =  2281  pred_num =  2084  right_num =  1662
+Test: time: 3.04s, speed: 192.70st/s; acc: 0.9403, p: 0.7975, r: 0.7286, f: 0.7615
+Epoch: 98/200
+     Instance: 2853; Time: 41.76s; loss: 168.6916; acc: 147771.0/163201.0=0.9055
+Epoch: 98 training finished. Time: 41.76s, speed: 68.32st/s,  total loss: 168.6916389465332
+totalloss: 168.6916389465332
+gold_num =  2237  pred_num =  2049  right_num =  1660
+Dev: time: 2.44s, speed: 253.72st/s; acc: 0.9467, p: 0.8102, r: 0.7421, f: 0.7746
+gold_num =  2281  pred_num =  2046  right_num =  1647
+Test: time: 2.37s, speed: 245.99st/s; acc: 0.9405, p: 0.8050, r: 0.7221, f: 0.7613
+Epoch: 99/200
+     Instance: 2853; Time: 40.95s; loss: 166.1999; acc: 148044.0/163201.0=0.9071
+Epoch: 99 training finished. Time: 40.95s, speed: 69.66st/s,  total loss: 166.1998529434204
+totalloss: 166.1998529434204
+gold_num =  2237  pred_num =  2152  right_num =  1710
+Dev: time: 2.19s, speed: 282.55st/s; acc: 0.9489, p: 0.7946, r: 0.7644, f: 0.7792
+gold_num =  2281  pred_num =  2177  right_num =  1683
+Test: time: 2.23s, speed: 262.77st/s; acc: 0.9402, p: 0.7731, r: 0.7378, f: 0.7550
+Epoch: 100/200
+     Instance: 2853; Time: 43.56s; loss: 171.2049; acc: 147491.0/163201.0=0.9037
+Epoch: 100 training finished. Time: 43.56s, speed: 65.49st/s,  total loss: 171.20489835739136
+totalloss: 171.20489835739136
+gold_num =  2237  pred_num =  2116  right_num =  1681
+Dev: time: 3.36s, speed: 184.30st/s; acc: 0.9464, p: 0.7944, r: 0.7515, f: 0.7723
+gold_num =  2281  pred_num =  2140  right_num =  1682
+Test: time: 3.42s, speed: 170.95st/s; acc: 0.9393, p: 0.7860, r: 0.7374, f: 0.7609
+Epoch: 101/200
+     Instance: 2853; Time: 34.11s; loss: 172.9870; acc: 147710.0/163201.0=0.9051
+Epoch: 101 training finished. Time: 34.11s, speed: 83.64st/s,  total loss: 172.98700046539307
+totalloss: 172.98700046539307
+gold_num =  2237  pred_num =  2015  right_num =  1640
+Dev: time: 3.35s, speed: 185.35st/s; acc: 0.9439, p: 0.8139, r: 0.7331, f: 0.7714
+gold_num =  2281  pred_num =  2042  right_num =  1643
+Test: time: 2.37s, speed: 245.96st/s; acc: 0.9389, p: 0.8046, r: 0.7203, f: 0.7601
+Epoch: 102/200
+     Instance: 2853; Time: 40.23s; loss: 172.6428; acc: 147164.0/163201.0=0.9017
+Epoch: 102 training finished. Time: 40.23s, speed: 70.91st/s,  total loss: 172.6428027153015
+totalloss: 172.6428027153015
+gold_num =  2237  pred_num =  1946  right_num =  1601
+Dev: time: 2.25s, speed: 274.84st/s; acc: 0.9433, p: 0.8227, r: 0.7157, f: 0.7655
+gold_num =  2281  pred_num =  1934  right_num =  1574
+Test: time: 2.44s, speed: 238.84st/s; acc: 0.9356, p: 0.8139, r: 0.6900, f: 0.7469
+Epoch: 103/200
+     Instance: 2853; Time: 37.82s; loss: 170.4629; acc: 147298.0/163201.0=0.9026
+Epoch: 103 training finished. Time: 37.82s, speed: 75.44st/s,  total loss: 170.4629373550415
+totalloss: 170.4629373550415
+gold_num =  2237  pred_num =  2072  right_num =  1665
+Dev: time: 2.22s, speed: 278.55st/s; acc: 0.9433, p: 0.8036, r: 0.7443, f: 0.7728
+gold_num =  2281  pred_num =  2067  right_num =  1640
+Test: time: 2.34s, speed: 249.73st/s; acc: 0.9376, p: 0.7934, r: 0.7190, f: 0.7544
+Epoch: 104/200
+     Instance: 2853; Time: 42.63s; loss: 170.6936; acc: 147271.0/163201.0=0.9024
+Epoch: 104 training finished. Time: 42.63s, speed: 66.92st/s,  total loss: 170.69355297088623
+totalloss: 170.69355297088623
+gold_num =  2237  pred_num =  2076  right_num =  1676
+Dev: time: 2.27s, speed: 272.30st/s; acc: 0.9467, p: 0.8073, r: 0.7492, f: 0.7772
+gold_num =  2281  pred_num =  2049  right_num =  1635
+Test: time: 2.35s, speed: 248.16st/s; acc: 0.9367, p: 0.7980, r: 0.7168, f: 0.7552
+Epoch: 105/200
+     Instance: 2853; Time: 41.17s; loss: 168.9506; acc: 147354.0/163201.0=0.9029
+Epoch: 105 training finished. Time: 41.17s, speed: 69.30st/s,  total loss: 168.95060968399048
+totalloss: 168.95060968399048
+gold_num =  2237  pred_num =  2105  right_num =  1669
+Dev: time: 3.10s, speed: 200.08st/s; acc: 0.9456, p: 0.7929, r: 0.7461, f: 0.7688
+gold_num =  2281  pred_num =  2115  right_num =  1669
+Test: time: 3.41s, speed: 171.41st/s; acc: 0.9391, p: 0.7891, r: 0.7317, f: 0.7593
+Epoch: 106/200
+     Instance: 2853; Time: 42.71s; loss: 170.7403; acc: 147119.0/163201.0=0.9015
+Epoch: 106 training finished. Time: 42.71s, speed: 66.80st/s,  total loss: 170.74033164978027
+totalloss: 170.74033164978027
+gold_num =  2237  pred_num =  2100  right_num =  1690
+Dev: time: 2.33s, speed: 267.46st/s; acc: 0.9445, p: 0.8048, r: 0.7555, f: 0.7793
+gold_num =  2281  pred_num =  2079  right_num =  1662
+Test: time: 2.46s, speed: 237.53st/s; acc: 0.9401, p: 0.7994, r: 0.7286, f: 0.7624
+Epoch: 107/200
+     Instance: 2853; Time: 42.34s; loss: 168.5593; acc: 147608.0/163201.0=0.9045
+Epoch: 107 training finished. Time: 42.34s, speed: 67.39st/s,  total loss: 168.55932569503784
+totalloss: 168.55932569503784
+gold_num =  2237  pred_num =  2121  right_num =  1685
+Dev: time: 3.34s, speed: 185.79st/s; acc: 0.9444, p: 0.7944, r: 0.7532, f: 0.7733
+gold_num =  2281  pred_num =  2153  right_num =  1677
+Test: time: 3.35s, speed: 174.61st/s; acc: 0.9364, p: 0.7789, r: 0.7352, f: 0.7564
+Epoch: 108/200
+     Instance: 2853; Time: 45.53s; loss: 171.0592; acc: 147163.0/163201.0=0.9017
+Epoch: 108 training finished. Time: 45.53s, speed: 62.66st/s,  total loss: 171.0591688156128
+totalloss: 171.0591688156128
+gold_num =  2237  pred_num =  1975  right_num =  1580
+Dev: time: 3.38s, speed: 183.48st/s; acc: 0.9384, p: 0.8000, r: 0.7063, f: 0.7502
+gold_num =  2281  pred_num =  1980  right_num =  1582
+Test: time: 3.37s, speed: 173.81st/s; acc: 0.9339, p: 0.7990, r: 0.6936, f: 0.7425
+Epoch: 109/200
+     Instance: 2853; Time: 43.80s; loss: 169.5360; acc: 147586.0/163201.0=0.9043
+Epoch: 109 training finished. Time: 43.80s, speed: 65.14st/s,  total loss: 169.53601503372192
+totalloss: 169.53601503372192
+gold_num =  2237  pred_num =  2082  right_num =  1687
+Dev: time: 3.23s, speed: 191.25st/s; acc: 0.9455, p: 0.8103, r: 0.7541, f: 0.7812
+gold_num =  2281  pred_num =  2118  right_num =  1657
+Test: time: 2.42s, speed: 241.31st/s; acc: 0.9357, p: 0.7823, r: 0.7264, f: 0.7534
+Epoch: 110/200
+     Instance: 2853; Time: 40.04s; loss: 173.4427; acc: 147412.0/163201.0=0.9033
+Epoch: 110 training finished. Time: 40.04s, speed: 71.26st/s,  total loss: 173.4426622390747
+totalloss: 173.4426622390747
+gold_num =  2237  pred_num =  2016  right_num =  1632
+Dev: time: 2.31s, speed: 267.90st/s; acc: 0.9426, p: 0.8095, r: 0.7295, f: 0.7675
+gold_num =  2281  pred_num =  2011  right_num =  1630
+Test: time: 2.52s, speed: 233.08st/s; acc: 0.9376, p: 0.8105, r: 0.7146, f: 0.7596
+Epoch: 111/200
+     Instance: 2853; Time: 42.90s; loss: 172.2818; acc: 147466.0/163201.0=0.9036
+Epoch: 111 training finished. Time: 42.90s, speed: 66.50st/s,  total loss: 172.28179740905762
+totalloss: 172.28179740905762
+gold_num =  2237  pred_num =  2138  right_num =  1664
+Dev: time: 3.36s, speed: 184.45st/s; acc: 0.9409, p: 0.7783, r: 0.7439, f: 0.7607
+gold_num =  2281  pred_num =  2128  right_num =  1668
+Test: time: 3.34s, speed: 175.11st/s; acc: 0.9372, p: 0.7838, r: 0.7313, f: 0.7566
+Epoch: 112/200
+     Instance: 2853; Time: 39.71s; loss: 171.4419; acc: 147146.0/163201.0=0.9016
+Epoch: 112 training finished. Time: 39.71s, speed: 71.85st/s,  total loss: 171.441885471344
+totalloss: 171.441885471344
+gold_num =  2237  pred_num =  2120  right_num =  1653
+Dev: time: 3.03s, speed: 203.53st/s; acc: 0.9428, p: 0.7797, r: 0.7389, f: 0.7588
+gold_num =  2281  pred_num =  2117  right_num =  1665
+Test: time: 2.40s, speed: 243.46st/s; acc: 0.9371, p: 0.7865, r: 0.7299, f: 0.7572
+Epoch: 113/200
+     Instance: 2853; Time: 41.22s; loss: 174.0954; acc: 146911.0/163201.0=0.9002
+Epoch: 113 training finished. Time: 41.22s, speed: 69.22st/s,  total loss: 174.0954008102417
+totalloss: 174.0954008102417
+gold_num =  2237  pred_num =  1988  right_num =  1512
+Dev: time: 2.92s, speed: 212.54st/s; acc: 0.9309, p: 0.7606, r: 0.6759, f: 0.7157
+gold_num =  2281  pred_num =  2020  right_num =  1562
+Test: time: 3.35s, speed: 174.43st/s; acc: 0.9294, p: 0.7733, r: 0.6848, f: 0.7263
+Epoch: 114/200
+     Instance: 2853; Time: 43.69s; loss: 178.0736; acc: 146876.0/163201.0=0.9000
+Epoch: 114 training finished. Time: 43.69s, speed: 65.31st/s,  total loss: 178.07358121871948
+totalloss: 178.07358121871948
+gold_num =  2237  pred_num =  2018  right_num =  1622
+Dev: time: 3.34s, speed: 185.92st/s; acc: 0.9438, p: 0.8038, r: 0.7251, f: 0.7624
+gold_num =  2281  pred_num =  2020  right_num =  1596
+Test: time: 3.32s, speed: 176.19st/s; acc: 0.9369, p: 0.7901, r: 0.6997, f: 0.7422
+Epoch: 115/200
+     Instance: 2853; Time: 41.75s; loss: 178.3575; acc: 146213.0/163201.0=0.8959
+Epoch: 115 training finished. Time: 41.75s, speed: 68.33st/s,  total loss: 178.35754346847534
+totalloss: 178.35754346847534
+gold_num =  2237  pred_num =  2065  right_num =  1622
+Dev: time: 2.58s, speed: 239.48st/s; acc: 0.9338, p: 0.7855, r: 0.7251, f: 0.7541
+gold_num =  2281  pred_num =  2090  right_num =  1600
+Test: time: 2.80s, speed: 208.36st/s; acc: 0.9265, p: 0.7656, r: 0.7014, f: 0.7321
+Epoch: 116/200
+     Instance: 2853; Time: 38.85s; loss: 193.1385; acc: 145359.0/163201.0=0.8907
+Epoch: 116 training finished. Time: 38.85s, speed: 73.43st/s,  total loss: 193.13846015930176
+totalloss: 193.13846015930176
+gold_num =  2237  pred_num =  2018  right_num =  1548
+Dev: time: 2.22s, speed: 278.70st/s; acc: 0.9338, p: 0.7671, r: 0.6920, f: 0.7276
+gold_num =  2281  pred_num =  2006  right_num =  1538
+Test: time: 2.53s, speed: 232.27st/s; acc: 0.9290, p: 0.7667, r: 0.6743, f: 0.7175
+Epoch: 117/200
+     Instance: 2853; Time: 43.18s; loss: 199.8378; acc: 145080.0/163201.0=0.8890
+Epoch: 117 training finished. Time: 43.18s, speed: 66.07st/s,  total loss: 199.83781385421753
+totalloss: 199.83781385421753
+gold_num =  2237  pred_num =  2021  right_num =  1584
+Dev: time: 3.35s, speed: 184.91st/s; acc: 0.9378, p: 0.7838, r: 0.7081, f: 0.7440
+gold_num =  2281  pred_num =  2029  right_num =  1557
+Test: time: 3.38s, speed: 173.16st/s; acc: 0.9302, p: 0.7674, r: 0.6826, f: 0.7225
+Epoch: 118/200
+     Instance: 2853; Time: 43.99s; loss: 212.7790; acc: 144170.0/163201.0=0.8834
+Epoch: 118 training finished. Time: 43.99s, speed: 64.86st/s,  total loss: 212.77900171279907
+totalloss: 212.77900171279907
+gold_num =  2237  pred_num =  1823  right_num =  1458
+Dev: time: 2.20s, speed: 282.17st/s; acc: 0.9332, p: 0.7998, r: 0.6518, f: 0.7182
+gold_num =  2281  pred_num =  1783  right_num =  1428
+Test: time: 2.19s, speed: 267.38st/s; acc: 0.9241, p: 0.8009, r: 0.6260, f: 0.7028
+Epoch: 119/200
+     Instance: 2853; Time: 39.90s; loss: 202.8596; acc: 144436.0/163201.0=0.8850
+Epoch: 119 training finished. Time: 39.90s, speed: 71.50st/s,  total loss: 202.8596429824829
+totalloss: 202.8596429824829
+gold_num =  2237  pred_num =  2086  right_num =  1592
+Dev: time: 3.33s, speed: 186.07st/s; acc: 0.9325, p: 0.7632, r: 0.7117, f: 0.7365
+gold_num =  2281  pred_num =  2077  right_num =  1562
+Test: time: 3.18s, speed: 183.46st/s; acc: 0.9254, p: 0.7520, r: 0.6848, f: 0.7168
+Epoch: 120/200
+     Instance: 2853; Time: 41.05s; loss: 202.7169; acc: 144818.0/163201.0=0.8874
+Epoch: 120 training finished. Time: 41.05s, speed: 69.51st/s,  total loss: 202.7168674468994
+totalloss: 202.7168674468994
+gold_num =  2237  pred_num =  2016  right_num =  1566
+Dev: time: 2.28s, speed: 271.86st/s; acc: 0.9342, p: 0.7768, r: 0.7000, f: 0.7364
+gold_num =  2281  pred_num =  2012  right_num =  1520
+Test: time: 2.32s, speed: 251.75st/s; acc: 0.9253, p: 0.7555, r: 0.6664, f: 0.7081
+Epoch: 121/200
+     Instance: 2853; Time: 43.27s; loss: 199.2995; acc: 144797.0/163201.0=0.8872
+Epoch: 121 training finished. Time: 43.27s, speed: 65.94st/s,  total loss: 199.29950523376465
+totalloss: 199.29950523376465
+gold_num =  2237  pred_num =  2041  right_num =  1588
+Dev: time: 3.35s, speed: 184.95st/s; acc: 0.9377, p: 0.7780, r: 0.7099, f: 0.7424
+gold_num =  2281  pred_num =  2035  right_num =  1546
+Test: time: 2.77s, speed: 210.79st/s; acc: 0.9296, p: 0.7597, r: 0.6778, f: 0.7164
+Epoch: 122/200
+     Instance: 2853; Time: 43.04s; loss: 205.6294; acc: 144334.0/163201.0=0.8844
+Epoch: 122 training finished. Time: 43.04s, speed: 66.28st/s,  total loss: 205.62943840026855
+totalloss: 205.62943840026855
+gold_num =  2237  pred_num =  2028  right_num =  1559
+Dev: time: 3.03s, speed: 203.90st/s; acc: 0.9357, p: 0.7687, r: 0.6969, f: 0.7311
+gold_num =  2281  pred_num =  2022  right_num =  1542
+Test: time: 2.23s, speed: 262.48st/s; acc: 0.9308, p: 0.7626, r: 0.6760, f: 0.7167
+Epoch: 123/200
+     Instance: 2853; Time: 40.71s; loss: 201.0612; acc: 144910.0/163201.0=0.8879
+Epoch: 123 training finished. Time: 40.71s, speed: 70.07st/s,  total loss: 201.06121253967285
+totalloss: 201.06121253967285
+gold_num =  2237  pred_num =  2011  right_num =  1531
+Dev: time: 3.33s, speed: 185.94st/s; acc: 0.9355, p: 0.7613, r: 0.6844, f: 0.7208
+gold_num =  2281  pred_num =  1989  right_num =  1532
+Test: time: 3.36s, speed: 174.16st/s; acc: 0.9291, p: 0.7702, r: 0.6716, f: 0.7176
+Epoch: 124/200
+     Instance: 2853; Time: 45.23s; loss: 198.4486; acc: 144914.0/163201.0=0.8879
+Epoch: 124 training finished. Time: 45.23s, speed: 63.07st/s,  total loss: 198.4486379623413
+totalloss: 198.4486379623413
+gold_num =  2237  pred_num =  2102  right_num =  1604
+Dev: time: 3.34s, speed: 185.75st/s; acc: 0.9338, p: 0.7631, r: 0.7170, f: 0.7393
+gold_num =  2281  pred_num =  2128  right_num =  1600
+Test: time: 2.65s, speed: 220.07st/s; acc: 0.9280, p: 0.7519, r: 0.7014, f: 0.7258
+Epoch: 125/200
+     Instance: 2853; Time: 39.47s; loss: 204.5262; acc: 144117.0/163201.0=0.8831
+Epoch: 125 training finished. Time: 39.47s, speed: 72.29st/s,  total loss: 204.52623653411865
+totalloss: 204.52623653411865
+gold_num =  2237  pred_num =  1923  right_num =  1506
+Dev: time: 3.34s, speed: 185.37st/s; acc: 0.9310, p: 0.7832, r: 0.6732, f: 0.7240
+gold_num =  2281  pred_num =  1947  right_num =  1510
+Test: time: 3.42s, speed: 170.82st/s; acc: 0.9295, p: 0.7756, r: 0.6620, f: 0.7143
+Epoch: 126/200
+     Instance: 2853; Time: 42.10s; loss: 202.8991; acc: 144714.0/163201.0=0.8867
+Epoch: 126 training finished. Time: 42.10s, speed: 67.77st/s,  total loss: 202.8990993499756
+totalloss: 202.8990993499756
+gold_num =  2237  pred_num =  2003  right_num =  1559
+Dev: time: 2.45s, speed: 252.50st/s; acc: 0.9359, p: 0.7783, r: 0.6969, f: 0.7354
+gold_num =  2281  pred_num =  1985  right_num =  1555
+Test: time: 2.46s, speed: 237.59st/s; acc: 0.9325, p: 0.7834, r: 0.6817, f: 0.7290
+Epoch: 127/200
+     Instance: 2853; Time: 42.95s; loss: 209.0303; acc: 144293.0/163201.0=0.8841
+Epoch: 127 training finished. Time: 42.95s, speed: 66.42st/s,  total loss: 209.0302906036377
+totalloss: 209.0302906036377
+gold_num =  2237  pred_num =  1961  right_num =  1517
+Dev: time: 3.30s, speed: 186.70st/s; acc: 0.9334, p: 0.7736, r: 0.6781, f: 0.7227
+gold_num =  2281  pred_num =  1950  right_num =  1512
+Test: time: 3.44s, speed: 170.21st/s; acc: 0.9278, p: 0.7754, r: 0.6629, f: 0.7147
+Epoch: 128/200
+     Instance: 2853; Time: 43.40s; loss: 210.6984; acc: 143965.0/163201.0=0.8821
+Epoch: 128 training finished. Time: 43.40s, speed: 65.74st/s,  total loss: 210.6984395980835
+totalloss: 210.6984395980835
+gold_num =  2237  pred_num =  2087  right_num =  1564
+Dev: time: 2.89s, speed: 213.97st/s; acc: 0.9339, p: 0.7494, r: 0.6992, f: 0.7234
+gold_num =  2281  pred_num =  2057  right_num =  1515
+Test: time: 3.07s, speed: 191.22st/s; acc: 0.9245, p: 0.7365, r: 0.6642, f: 0.6985
+Epoch: 129/200
+     Instance: 2853; Time: 42.97s; loss: 204.6220; acc: 144720.0/163201.0=0.8868
+Epoch: 129 training finished. Time: 42.97s, speed: 66.40st/s,  total loss: 204.62197589874268
+totalloss: 204.62197589874268
+gold_num =  2237  pred_num =  2066  right_num =  1542
+Dev: time: 2.88s, speed: 214.66st/s; acc: 0.9184, p: 0.7464, r: 0.6893, f: 0.7167
+gold_num =  2281  pred_num =  2082  right_num =  1528
+Test: time: 2.73s, speed: 213.90st/s; acc: 0.9136, p: 0.7339, r: 0.6699, f: 0.7004
+Epoch: 130/200
+     Instance: 2853; Time: 38.84s; loss: 209.5763; acc: 143561.0/163201.0=0.8797
+Epoch: 130 training finished. Time: 38.84s, speed: 73.46st/s,  total loss: 209.57632446289062
+totalloss: 209.57632446289062
+gold_num =  2237  pred_num =  1933  right_num =  1495
+Dev: time: 3.32s, speed: 185.91st/s; acc: 0.9287, p: 0.7734, r: 0.6683, f: 0.7170
+gold_num =  2281  pred_num =  1924  right_num =  1452
+Test: time: 2.34s, speed: 249.96st/s; acc: 0.9184, p: 0.7547, r: 0.6366, f: 0.6906
+Epoch: 131/200
+     Instance: 2853; Time: 39.60s; loss: 215.4749; acc: 143488.0/163201.0=0.8792
+Epoch: 131 training finished. Time: 39.60s, speed: 72.05st/s,  total loss: 215.47485542297363
+totalloss: 215.47485542297363
+gold_num =  2237  pred_num =  1972  right_num =  1508
+Dev: time: 2.23s, speed: 277.66st/s; acc: 0.9330, p: 0.7647, r: 0.6741, f: 0.7166
+gold_num =  2281  pred_num =  1934  right_num =  1492
+Test: time: 2.39s, speed: 244.40st/s; acc: 0.9262, p: 0.7715, r: 0.6541, f: 0.7079
+Epoch: 132/200
+     Instance: 2853; Time: 39.52s; loss: 208.2896; acc: 144118.0/163201.0=0.8831
+Epoch: 132 training finished. Time: 39.52s, speed: 72.20st/s,  total loss: 208.2896270751953
+totalloss: 208.2896270751953
+gold_num =  2237  pred_num =  2033  right_num =  1552
+Dev: time: 3.37s, speed: 184.05st/s; acc: 0.9352, p: 0.7634, r: 0.6938, f: 0.7269
+gold_num =  2281  pred_num =  2043  right_num =  1540
+Test: time: 3.50s, speed: 167.36st/s; acc: 0.9265, p: 0.7538, r: 0.6751, f: 0.7123
+Epoch: 133/200
+     Instance: 2853; Time: 42.26s; loss: 214.7128; acc: 143685.0/163201.0=0.8804
+Epoch: 133 training finished. Time: 42.26s, speed: 67.51st/s,  total loss: 214.71280479431152
+totalloss: 214.71280479431152
+gold_num =  2237  pred_num =  1897  right_num =  1411
+Dev: time: 3.05s, speed: 202.15st/s; acc: 0.9191, p: 0.7438, r: 0.6308, f: 0.6826
+gold_num =  2281  pred_num =  1881  right_num =  1389
+Test: time: 2.38s, speed: 247.37st/s; acc: 0.9137, p: 0.7384, r: 0.6089, f: 0.6675
+Epoch: 134/200
+     Instance: 2853; Time: 44.10s; loss: 229.4320; acc: 142527.0/163201.0=0.8733
+Epoch: 134 training finished. Time: 44.10s, speed: 64.69st/s,  total loss: 229.43196868896484
+totalloss: 229.43196868896484
+gold_num =  2237  pred_num =  1877  right_num =  1417
+Dev: time: 3.23s, speed: 191.69st/s; acc: 0.9264, p: 0.7549, r: 0.6334, f: 0.6889
+gold_num =  2281  pred_num =  1883  right_num =  1417
+Test: time: 3.06s, speed: 190.61st/s; acc: 0.9197, p: 0.7525, r: 0.6212, f: 0.6806
+Epoch: 135/200
+     Instance: 2853; Time: 45.44s; loss: 227.2319; acc: 142972.0/163201.0=0.8760
+Epoch: 135 training finished. Time: 45.44s, speed: 62.78st/s,  total loss: 227.23191452026367
+totalloss: 227.23191452026367
+gold_num =  2237  pred_num =  1897  right_num =  1412
+Dev: time: 3.03s, speed: 206.58st/s; acc: 0.9253, p: 0.7443, r: 0.6312, f: 0.6831
+gold_num =  2281  pred_num =  1893  right_num =  1383
+Test: time: 3.42s, speed: 171.33st/s; acc: 0.9186, p: 0.7306, r: 0.6063, f: 0.6627
+Epoch: 136/200
+     Instance: 2853; Time: 39.21s; loss: 219.5180; acc: 142925.0/163201.0=0.8758
+Epoch: 136 training finished. Time: 39.21s, speed: 72.77st/s,  total loss: 219.5180468559265
+totalloss: 219.5180468559265
+gold_num =  2237  pred_num =  1715  right_num =  1306
+Dev: time: 3.30s, speed: 187.71st/s; acc: 0.9199, p: 0.7615, r: 0.5838, f: 0.6609
+gold_num =  2281  pred_num =  1700  right_num =  1308
+Test: time: 2.67s, speed: 218.85st/s; acc: 0.9127, p: 0.7694, r: 0.5734, f: 0.6571
+Epoch: 137/200
+     Instance: 2853; Time: 36.44s; loss: 223.6351; acc: 142645.0/163201.0=0.8740
+Epoch: 137 training finished. Time: 36.44s, speed: 78.29st/s,  total loss: 223.6350975036621
+totalloss: 223.6350975036621
+gold_num =  2237  pred_num =  1977  right_num =  1450
+Dev: time: 3.30s, speed: 188.20st/s; acc: 0.9262, p: 0.7334, r: 0.6482, f: 0.6882
+gold_num =  2281  pred_num =  1991  right_num =  1462
+Test: time: 3.40s, speed: 172.16st/s; acc: 0.9193, p: 0.7343, r: 0.6409, f: 0.6845
+Epoch: 138/200
+     Instance: 2853; Time: 45.15s; loss: 224.4320; acc: 142777.0/163201.0=0.8749
+Epoch: 138 training finished. Time: 45.15s, speed: 63.19st/s,  total loss: 224.43198108673096
+totalloss: 224.43198108673096
+gold_num =  2237  pred_num =  1919  right_num =  1393
+Dev: time: 3.33s, speed: 185.99st/s; acc: 0.9212, p: 0.7259, r: 0.6227, f: 0.6704
+gold_num =  2281  pred_num =  1901  right_num =  1395
+Test: time: 3.36s, speed: 174.23st/s; acc: 0.9153, p: 0.7338, r: 0.6116, f: 0.6671
+Epoch: 139/200
+     Instance: 2853; Time: 42.41s; loss: 229.6925; acc: 142726.0/163201.0=0.8745
+Epoch: 139 training finished. Time: 42.41s, speed: 67.27st/s,  total loss: 229.6924934387207
+totalloss: 229.6924934387207
+gold_num =  2237  pred_num =  1927  right_num =  1385
+Dev: time: 2.73s, speed: 226.27st/s; acc: 0.9213, p: 0.7187, r: 0.6191, f: 0.6652
+gold_num =  2281  pred_num =  1931  right_num =  1392
+Test: time: 2.83s, speed: 207.07st/s; acc: 0.9130, p: 0.7209, r: 0.6103, f: 0.6610
+Epoch: 140/200
+     Instance: 2853; Time: 41.84s; loss: 226.8221; acc: 142741.0/163201.0=0.8746
+Epoch: 140 training finished. Time: 41.84s, speed: 68.19st/s,  total loss: 226.82213306427002
+totalloss: 226.82213306427002
+gold_num =  2237  pred_num =  1814  right_num =  1371
+Dev: time: 2.67s, speed: 231.34st/s; acc: 0.9239, p: 0.7558, r: 0.6129, f: 0.6769
+gold_num =  2281  pred_num =  1796  right_num =  1380
+Test: time: 3.04s, speed: 192.82st/s; acc: 0.9162, p: 0.7684, r: 0.6050, f: 0.6770
+Epoch: 141/200
+     Instance: 2853; Time: 43.12s; loss: 226.8381; acc: 142528.0/163201.0=0.8733
+Epoch: 141 training finished. Time: 43.12s, speed: 66.16st/s,  total loss: 226.83809852600098
+totalloss: 226.83809852600098
+gold_num =  2237  pred_num =  2081  right_num =  1490
+Dev: time: 2.91s, speed: 212.41st/s; acc: 0.9280, p: 0.7160, r: 0.6661, f: 0.6901
+gold_num =  2281  pred_num =  2103  right_num =  1518
+Test: time: 2.34s, speed: 249.62st/s; acc: 0.9231, p: 0.7218, r: 0.6655, f: 0.6925
+Epoch: 142/200
+     Instance: 2853; Time: 41.25s; loss: 234.5999; acc: 141799.0/163201.0=0.8689
+Epoch: 142 training finished. Time: 41.25s, speed: 69.17st/s,  total loss: 234.59991931915283
+totalloss: 234.59991931915283
+gold_num =  2237  pred_num =  1905  right_num =  1401
+Dev: time: 3.34s, speed: 185.44st/s; acc: 0.9218, p: 0.7354, r: 0.6263, f: 0.6765
+gold_num =  2281  pred_num =  1922  right_num =  1420
+Test: time: 3.18s, speed: 182.89st/s; acc: 0.9175, p: 0.7388, r: 0.6225, f: 0.6757
+Epoch: 143/200
+     Instance: 2853; Time: 41.43s; loss: 231.5247; acc: 141807.0/163201.0=0.8689
+Epoch: 143 training finished. Time: 41.43s, speed: 68.87st/s,  total loss: 231.5247278213501
+totalloss: 231.5247278213501
+gold_num =  2237  pred_num =  1924  right_num =  1369
+Dev: time: 3.34s, speed: 185.44st/s; acc: 0.9178, p: 0.7115, r: 0.6120, f: 0.6580
+gold_num =  2281  pred_num =  1954  right_num =  1373
+Test: time: 2.53s, speed: 230.60st/s; acc: 0.9122, p: 0.7027, r: 0.6019, f: 0.6484
+Epoch: 144/200
+     Instance: 2853; Time: 43.53s; loss: 236.9428; acc: 141514.0/163201.0=0.8671
+Epoch: 144 training finished. Time: 43.53s, speed: 65.55st/s,  total loss: 236.94281578063965
+totalloss: 236.94281578063965
+gold_num =  2237  pred_num =  1828  right_num =  1369
+Dev: time: 3.31s, speed: 187.47st/s; acc: 0.9212, p: 0.7489, r: 0.6120, f: 0.6736
+gold_num =  2281  pred_num =  1847  right_num =  1358
+Test: time: 2.46s, speed: 237.29st/s; acc: 0.9134, p: 0.7352, r: 0.5954, f: 0.6579
+Epoch: 145/200
+     Instance: 2853; Time: 43.93s; loss: 243.1951; acc: 140684.0/163201.0=0.8620
+Epoch: 145 training finished. Time: 43.93s, speed: 64.94st/s,  total loss: 243.1951446533203
+totalloss: 243.1951446533203
+gold_num =  2237  pred_num =  1975  right_num =  1372
+Dev: time: 3.34s, speed: 185.89st/s; acc: 0.9161, p: 0.6947, r: 0.6133, f: 0.6515
+gold_num =  2281  pred_num =  2041  right_num =  1412
+Test: time: 3.37s, speed: 173.77st/s; acc: 0.9138, p: 0.6918, r: 0.6190, f: 0.6534
+Epoch: 146/200
+     Instance: 2853; Time: 42.96s; loss: 239.6907; acc: 141216.0/163201.0=0.8653
+Epoch: 146 training finished. Time: 42.96s, speed: 66.42st/s,  total loss: 239.69070529937744
+totalloss: 239.69070529937744
+gold_num =  2237  pred_num =  1947  right_num =  1395
+Dev: time: 3.33s, speed: 186.28st/s; acc: 0.9230, p: 0.7165, r: 0.6236, f: 0.6668
+gold_num =  2281  pred_num =  1994  right_num =  1416
+Test: time: 3.41s, speed: 171.59st/s; acc: 0.9159, p: 0.7101, r: 0.6208, f: 0.6625
+Epoch: 147/200
+     Instance: 2853; Time: 43.18s; loss: 235.1008; acc: 141473.0/163201.0=0.8669
+Epoch: 147 training finished. Time: 43.18s, speed: 66.07st/s,  total loss: 235.1007833480835
+totalloss: 235.1007833480835
+gold_num =  2237  pred_num =  1775  right_num =  1327
+Dev: time: 3.34s, speed: 185.80st/s; acc: 0.9193, p: 0.7476, r: 0.5932, f: 0.6615
+gold_num =  2281  pred_num =  1828  right_num =  1361
+Test: time: 3.39s, speed: 172.38st/s; acc: 0.9136, p: 0.7445, r: 0.5967, f: 0.6624
+Epoch: 148/200
+     Instance: 2853; Time: 40.50s; loss: 233.5586; acc: 142071.0/163201.0=0.8705
+Epoch: 148 training finished. Time: 40.50s, speed: 70.44st/s,  total loss: 233.55863666534424
+totalloss: 233.55863666534424
+gold_num =  2237  pred_num =  1761  right_num =  1325
+Dev: time: 3.33s, speed: 186.24st/s; acc: 0.9207, p: 0.7524, r: 0.5923, f: 0.6628
+gold_num =  2281  pred_num =  1835  right_num =  1376
+Test: time: 3.33s, speed: 175.07st/s; acc: 0.9151, p: 0.7499, r: 0.6032, f: 0.6686
+Epoch: 149/200
+     Instance: 2853; Time: 44.71s; loss: 226.0807; acc: 142074.0/163201.0=0.8705
+Epoch: 149 training finished. Time: 44.71s, speed: 63.82st/s,  total loss: 226.08066940307617
+totalloss: 226.08066940307617
+gold_num =  2237  pred_num =  1812  right_num =  1367
+Dev: time: 2.94s, speed: 210.04st/s; acc: 0.9182, p: 0.7544, r: 0.6111, f: 0.6752
+gold_num =  2281  pred_num =  1855  right_num =  1400
+Test: time: 3.37s, speed: 173.31st/s; acc: 0.9144, p: 0.7547, r: 0.6138, f: 0.6770
+Epoch: 150/200
+     Instance: 2853; Time: 46.50s; loss: 231.6088; acc: 142319.0/163201.0=0.8720
+Epoch: 150 training finished. Time: 46.50s, speed: 61.35st/s,  total loss: 231.6088047027588
+totalloss: 231.6088047027588
+gold_num =  2237  pred_num =  1800  right_num =  1296
+Dev: time: 3.37s, speed: 183.80st/s; acc: 0.9112, p: 0.7200, r: 0.5793, f: 0.6421
+gold_num =  2281  pred_num =  1839  right_num =  1346
+Test: time: 3.36s, speed: 174.26st/s; acc: 0.9125, p: 0.7319, r: 0.5901, f: 0.6534
+Epoch: 151/200
+     Instance: 2853; Time: 42.44s; loss: 236.3267; acc: 141857.0/163201.0=0.8692
+Epoch: 151 training finished. Time: 42.44s, speed: 67.22st/s,  total loss: 236.32666873931885
+totalloss: 236.32666873931885
+gold_num =  2237  pred_num =  1929  right_num =  1395
+Dev: time: 3.36s, speed: 184.63st/s; acc: 0.9205, p: 0.7232, r: 0.6236, f: 0.6697
+gold_num =  2281  pred_num =  1972  right_num =  1436
+Test: time: 3.37s, speed: 173.57st/s; acc: 0.9171, p: 0.7282, r: 0.6295, f: 0.6753
+Epoch: 152/200
+     Instance: 2853; Time: 42.43s; loss: 234.1845; acc: 141090.0/163201.0=0.8645
+Epoch: 152 training finished. Time: 42.43s, speed: 67.25st/s,  total loss: 234.18454504013062
+totalloss: 234.18454504013062
+gold_num =  2237  pred_num =  1477  right_num =  1117
+Dev: time: 2.26s, speed: 273.54st/s; acc: 0.9002, p: 0.7563, r: 0.4993, f: 0.6015
+gold_num =  2281  pred_num =  1521  right_num =  1175
+Test: time: 2.52s, speed: 231.80st/s; acc: 0.8999, p: 0.7725, r: 0.5151, f: 0.6181
+Epoch: 153/200
+     Instance: 2853; Time: 41.85s; loss: 253.1807; acc: 140275.0/163201.0=0.8595
+Epoch: 153 training finished. Time: 41.85s, speed: 68.18st/s,  total loss: 253.18073558807373
+totalloss: 253.18073558807373
+gold_num =  2237  pred_num =  1961  right_num =  1252
+Dev: time: 2.40s, speed: 260.30st/s; acc: 0.8840, p: 0.6384, r: 0.5597, f: 0.5965
+gold_num =  2281  pred_num =  1958  right_num =  1281
+Test: time: 3.37s, speed: 173.65st/s; acc: 0.8832, p: 0.6542, r: 0.5616, f: 0.6044
+Epoch: 154/200
+     Instance: 2853; Time: 41.56s; loss: 258.6401; acc: 139761.0/163201.0=0.8564
+Epoch: 154 training finished. Time: 41.56s, speed: 68.64st/s,  total loss: 258.64014625549316
+totalloss: 258.64014625549316
+gold_num =  2237  pred_num =  1615  right_num =  1213
+Dev: time: 2.27s, speed: 272.50st/s; acc: 0.9123, p: 0.7511, r: 0.5422, f: 0.6298
+gold_num =  2281  pred_num =  1647  right_num =  1237
+Test: time: 2.32s, speed: 252.04st/s; acc: 0.9084, p: 0.7511, r: 0.5423, f: 0.6298
+Epoch: 155/200
+     Instance: 2853; Time: 41.37s; loss: 261.7663; acc: 139760.0/163201.0=0.8564
+Epoch: 155 training finished. Time: 41.37s, speed: 68.96st/s,  total loss: 261.7663450241089
+totalloss: 261.7663450241089
+gold_num =  2237  pred_num =  1932  right_num =  1330
+Dev: time: 3.24s, speed: 190.63st/s; acc: 0.9114, p: 0.6884, r: 0.5945, f: 0.6380
+gold_num =  2281  pred_num =  1896  right_num =  1294
+Test: time: 2.40s, speed: 243.30st/s; acc: 0.9088, p: 0.6825, r: 0.5673, f: 0.6196
+Epoch: 156/200
+     Instance: 2853; Time: 43.20s; loss: 269.7572; acc: 139226.0/163201.0=0.8531
+Epoch: 156 training finished. Time: 43.20s, speed: 66.05st/s,  total loss: 269.7571601867676
+totalloss: 269.7571601867676
+gold_num =  2237  pred_num =  1747  right_num =  1230
+Dev: time: 3.31s, speed: 187.13st/s; acc: 0.9088, p: 0.7041, r: 0.5498, f: 0.6175
+gold_num =  2281  pred_num =  1742  right_num =  1231
+Test: time: 3.37s, speed: 173.96st/s; acc: 0.9065, p: 0.7067, r: 0.5397, f: 0.6120
+Epoch: 157/200
+     Instance: 2853; Time: 42.91s; loss: 262.5421; acc: 139257.0/163201.0=0.8533
+Epoch: 157 training finished. Time: 42.92s, speed: 66.48st/s,  total loss: 262.54214096069336
+totalloss: 262.54214096069336
+gold_num =  2237  pred_num =  1476  right_num =  1088
+Dev: time: 3.34s, speed: 185.34st/s; acc: 0.9002, p: 0.7371, r: 0.4864, f: 0.5860
+gold_num =  2281  pred_num =  1513  right_num =  1134
+Test: time: 3.33s, speed: 175.54st/s; acc: 0.9001, p: 0.7495, r: 0.4972, f: 0.5978
+Epoch: 158/200
+     Instance: 2853; Time: 40.10s; loss: 258.1858; acc: 139986.0/163201.0=0.8578
+Epoch: 158 training finished. Time: 40.10s, speed: 71.14st/s,  total loss: 258.185827255249
+totalloss: 258.185827255249
+gold_num =  2237  pred_num =  1534  right_num =  1141
+Dev: time: 2.28s, speed: 271.36st/s; acc: 0.9027, p: 0.7438, r: 0.5101, f: 0.6051
+gold_num =  2281  pred_num =  1592  right_num =  1162
+Test: time: 2.38s, speed: 245.76st/s; acc: 0.9017, p: 0.7299, r: 0.5094, f: 0.6001
+Epoch: 159/200
+     Instance: 2853; Time: 45.53s; loss: 259.8033; acc: 139302.0/163201.0=0.8536
+Epoch: 159 training finished. Time: 45.53s, speed: 62.66st/s,  total loss: 259.803316116333
+totalloss: 259.803316116333
+gold_num =  2237  pred_num =  1533  right_num =  1129
+Dev: time: 2.37s, speed: 261.51st/s; acc: 0.9058, p: 0.7365, r: 0.5047, f: 0.5989
+gold_num =  2281  pred_num =  1522  right_num =  1133
+Test: time: 2.69s, speed: 218.04st/s; acc: 0.9014, p: 0.7444, r: 0.4967, f: 0.5958
+Epoch: 160/200
+     Instance: 2853; Time: 40.53s; loss: 265.9874; acc: 139618.0/163201.0=0.8555
+Epoch: 160 training finished. Time: 40.53s, speed: 70.38st/s,  total loss: 265.98743629455566
+totalloss: 265.98743629455566
+gold_num =  2237  pred_num =  1341  right_num =  992
+Dev: time: 3.34s, speed: 185.61st/s; acc: 0.8957, p: 0.7397, r: 0.4435, f: 0.5545
+gold_num =  2281  pred_num =  1425  right_num =  1066
+Test: time: 3.33s, speed: 175.71st/s; acc: 0.8971, p: 0.7481, r: 0.4673, f: 0.5753
+Epoch: 161/200
+     Instance: 2853; Time: 44.88s; loss: 256.3337; acc: 139927.0/163201.0=0.8574
+Epoch: 161 training finished. Time: 44.88s, speed: 63.57st/s,  total loss: 256.3337116241455
+totalloss: 256.3337116241455
+gold_num =  2237  pred_num =  1750  right_num =  1231
+Dev: time: 2.18s, speed: 284.13st/s; acc: 0.9070, p: 0.7034, r: 0.5503, f: 0.6175
+gold_num =  2281  pred_num =  1760  right_num =  1240
+Test: time: 2.68s, speed: 218.87st/s; acc: 0.9021, p: 0.7045, r: 0.5436, f: 0.6137
+Epoch: 162/200
+     Instance: 2853; Time: 42.71s; loss: 269.3066; acc: 139167.0/163201.0=0.8527
+Epoch: 162 training finished. Time: 42.71s, speed: 66.80st/s,  total loss: 269.3066062927246
+totalloss: 269.3066062927246
+gold_num =  2237  pred_num =  1741  right_num =  1197
+Dev: time: 3.35s, speed: 184.70st/s; acc: 0.9013, p: 0.6875, r: 0.5351, f: 0.6018
+gold_num =  2281  pred_num =  1777  right_num =  1258
+Test: time: 3.35s, speed: 174.39st/s; acc: 0.9035, p: 0.7079, r: 0.5515, f: 0.6200
+Epoch: 163/200
+     Instance: 2853; Time: 44.08s; loss: 275.3990; acc: 138794.0/163201.0=0.8504
+Epoch: 163 training finished. Time: 44.08s, speed: 64.73st/s,  total loss: 275.3990306854248
+totalloss: 275.3990306854248
+gold_num =  2237  pred_num =  2046  right_num =  1361
+Dev: time: 2.16s, speed: 286.87st/s; acc: 0.9089, p: 0.6652, r: 0.6084, f: 0.6355
+gold_num =  2281  pred_num =  2073  right_num =  1343
+Test: time: 2.87s, speed: 204.73st/s; acc: 0.9032, p: 0.6479, r: 0.5888, f: 0.6169
+Epoch: 164/200
+     Instance: 2853; Time: 43.26s; loss: 260.3242; acc: 139492.0/163201.0=0.8547
+Epoch: 164 training finished. Time: 43.26s, speed: 65.95st/s,  total loss: 260.3241949081421
+totalloss: 260.3241949081421
+gold_num =  2237  pred_num =  1588  right_num =  1129
+Dev: time: 3.33s, speed: 185.79st/s; acc: 0.9040, p: 0.7110, r: 0.5047, f: 0.5903
+gold_num =  2281  pred_num =  1571  right_num =  1096
+Test: time: 3.37s, speed: 173.92st/s; acc: 0.8972, p: 0.6976, r: 0.4805, f: 0.5691
+Epoch: 165/200
+     Instance: 2853; Time: 41.83s; loss: 256.4009; acc: 140021.0/163201.0=0.8580
+Epoch: 165 training finished. Time: 41.83s, speed: 68.20st/s,  total loss: 256.4008893966675
+totalloss: 256.4008893966675
+gold_num =  2237  pred_num =  1769  right_num =  1202
+Dev: time: 2.17s, speed: 284.67st/s; acc: 0.8951, p: 0.6795, r: 0.5373, f: 0.6001
+gold_num =  2281  pred_num =  1775  right_num =  1190
+Test: time: 2.18s, speed: 268.12st/s; acc: 0.8941, p: 0.6704, r: 0.5217, f: 0.5868
+Epoch: 166/200
+     Instance: 2853; Time: 44.91s; loss: 250.9698; acc: 140195.0/163201.0=0.8590
+Epoch: 166 training finished. Time: 44.91s, speed: 63.53st/s,  total loss: 250.96979999542236
+totalloss: 250.96979999542236
+gold_num =  2237  pred_num =  1734  right_num =  1184
+Dev: time: 3.38s, speed: 183.52st/s; acc: 0.8995, p: 0.6828, r: 0.5293, f: 0.5963
+gold_num =  2281  pred_num =  1749  right_num =  1169
+Test: time: 3.37s, speed: 173.40st/s; acc: 0.8946, p: 0.6684, r: 0.5125, f: 0.5801
+Epoch: 167/200
+     Instance: 2853; Time: 43.53s; loss: 253.8835; acc: 139795.0/163201.0=0.8566
+Epoch: 167 training finished. Time: 43.53s, speed: 65.54st/s,  total loss: 253.8834629058838
+totalloss: 253.8834629058838
+gold_num =  2237  pred_num =  1820  right_num =  1240
+Dev: time: 2.18s, speed: 284.06st/s; acc: 0.9027, p: 0.6813, r: 0.5543, f: 0.6113
+gold_num =  2281  pred_num =  1866  right_num =  1268
+Test: time: 2.52s, speed: 231.48st/s; acc: 0.9021, p: 0.6795, r: 0.5559, f: 0.6115
+Epoch: 168/200
+     Instance: 2853; Time: 44.84s; loss: 257.0935; acc: 139451.0/163201.0=0.8545
+Epoch: 168 training finished. Time: 44.84s, speed: 63.62st/s,  total loss: 257.09352111816406
+totalloss: 257.09352111816406
+gold_num =  2237  pred_num =  1930  right_num =  1283
+Dev: time: 3.31s, speed: 186.91st/s; acc: 0.9043, p: 0.6648, r: 0.5735, f: 0.6158
+gold_num =  2281  pred_num =  1955  right_num =  1295
+Test: time: 3.51s, speed: 166.42st/s; acc: 0.9056, p: 0.6624, r: 0.5677, f: 0.6114
+Epoch: 169/200
+     Instance: 2853; Time: 43.97s; loss: 268.4075; acc: 138706.0/163201.0=0.8499
+Epoch: 169 training finished. Time: 43.97s, speed: 64.88st/s,  total loss: 268.40749073028564
+totalloss: 268.40749073028564
+gold_num =  2237  pred_num =  1722  right_num =  1179
+Dev: time: 2.29s, speed: 269.57st/s; acc: 0.9004, p: 0.6847, r: 0.5270, f: 0.5956
+gold_num =  2281  pred_num =  1719  right_num =  1171
+Test: time: 2.49s, speed: 235.99st/s; acc: 0.8957, p: 0.6812, r: 0.5134, f: 0.5855
+Epoch: 170/200
+     Instance: 2853; Time: 40.50s; loss: 260.0463; acc: 140089.0/163201.0=0.8584
+Epoch: 170 training finished. Time: 40.50s, speed: 70.45st/s,  total loss: 260.0462989807129
+totalloss: 260.0462989807129
+gold_num =  2237  pred_num =  1839  right_num =  1308
+Dev: time: 3.32s, speed: 186.77st/s; acc: 0.9140, p: 0.7113, r: 0.5847, f: 0.6418
+gold_num =  2281  pred_num =  1886  right_num =  1333
+Test: time: 3.32s, speed: 176.38st/s; acc: 0.9112, p: 0.7068, r: 0.5844, f: 0.6398
+Epoch: 171/200
+     Instance: 2853; Time: 44.37s; loss: 248.7473; acc: 140325.0/163201.0=0.8598
+Epoch: 171 training finished. Time: 44.37s, speed: 64.30st/s,  total loss: 248.74726486206055
+totalloss: 248.74726486206055
+gold_num =  2237  pred_num =  1552  right_num =  1154
+Dev: time: 2.20s, speed: 281.55st/s; acc: 0.9053, p: 0.7436, r: 0.5159, f: 0.6091
+gold_num =  2281  pred_num =  1566  right_num =  1171
+Test: time: 2.47s, speed: 238.03st/s; acc: 0.9036, p: 0.7478, r: 0.5134, f: 0.6088
+Epoch: 172/200
+     Instance: 2853; Time: 40.79s; loss: 247.1897; acc: 140277.0/163201.0=0.8595
+Epoch: 172 training finished. Time: 40.79s, speed: 69.95st/s,  total loss: 247.18972206115723
+totalloss: 247.18972206115723
+gold_num =  2237  pred_num =  1742  right_num =  1231
+Dev: time: 3.29s, speed: 188.03st/s; acc: 0.9116, p: 0.7067, r: 0.5503, f: 0.6187
+gold_num =  2281  pred_num =  1767  right_num =  1274
+Test: time: 3.34s, speed: 175.36st/s; acc: 0.9121, p: 0.7210, r: 0.5585, f: 0.6294
+Epoch: 173/200
+     Instance: 2853; Time: 29.85s; loss: 251.5884; acc: 140229.0/163201.0=0.8592
+Epoch: 173 training finished. Time: 29.85s, speed: 95.57st/s,  total loss: 251.58835220336914
+totalloss: 251.58835220336914
+gold_num =  2237  pred_num =  1868  right_num =  1285
+Dev: time: 3.29s, speed: 188.44st/s; acc: 0.9126, p: 0.6879, r: 0.5744, f: 0.6261
+gold_num =  2281  pred_num =  1897  right_num =  1295
+Test: time: 3.33s, speed: 175.55st/s; acc: 0.9080, p: 0.6827, r: 0.5677, f: 0.6199
+Epoch: 174/200
+     Instance: 2853; Time: 25.52s; loss: 253.5795; acc: 139785.0/163201.0=0.8565
+Epoch: 174 training finished. Time: 25.52s, speed: 111.79st/s,  total loss: 253.57945728302002
+totalloss: 253.57945728302002
+gold_num =  2237  pred_num =  1869  right_num =  1287
+Dev: time: 3.28s, speed: 188.75st/s; acc: 0.9093, p: 0.6886, r: 0.5753, f: 0.6269
+gold_num =  2281  pred_num =  1890  right_num =  1282
+Test: time: 3.36s, speed: 174.03st/s; acc: 0.9049, p: 0.6783, r: 0.5620, f: 0.6147
+Epoch: 175/200
+     Instance: 2853; Time: 30.30s; loss: 251.8560; acc: 140154.0/163201.0=0.8588
+Epoch: 175 training finished. Time: 30.30s, speed: 94.16st/s,  total loss: 251.8559627532959
+totalloss: 251.8559627532959
+gold_num =  2237  pred_num =  1832  right_num =  1324
+Dev: time: 3.30s, speed: 187.72st/s; acc: 0.9147, p: 0.7227, r: 0.5919, f: 0.6508
+gold_num =  2281  pred_num =  1846  right_num =  1307
+Test: time: 3.32s, speed: 175.41st/s; acc: 0.9107, p: 0.7080, r: 0.5730, f: 0.6334
+Epoch: 176/200
+     Instance: 2853; Time: 29.32s; loss: 251.7941; acc: 140039.0/163201.0=0.8581
+Epoch: 176 training finished. Time: 29.32s, speed: 97.29st/s,  total loss: 251.79412651062012
+totalloss: 251.79412651062012
+gold_num =  2237  pred_num =  1732  right_num =  1270
+Dev: time: 2.10s, speed: 295.00st/s; acc: 0.9133, p: 0.7333, r: 0.5677, f: 0.6400
+gold_num =  2281  pred_num =  1741  right_num =  1266
+Test: time: 2.23s, speed: 262.51st/s; acc: 0.9080, p: 0.7272, r: 0.5550, f: 0.6295
+Epoch: 177/200
+     Instance: 2853; Time: 26.03s; loss: 253.9047; acc: 139917.0/163201.0=0.8573
+Epoch: 177 training finished. Time: 26.03s, speed: 109.62st/s,  total loss: 253.9047451019287
+totalloss: 253.9047451019287
+gold_num =  2237  pred_num =  1753  right_num =  1222
+Dev: time: 3.30s, speed: 187.84st/s; acc: 0.9054, p: 0.6971, r: 0.5463, f: 0.6125
+gold_num =  2281  pred_num =  1762  right_num =  1257
+Test: time: 3.35s, speed: 174.49st/s; acc: 0.9035, p: 0.7134, r: 0.5511, f: 0.6218
+Epoch: 178/200
+     Instance: 2853; Time: 29.69s; loss: 259.4408; acc: 139418.0/163201.0=0.8543
+Epoch: 178 training finished. Time: 29.69s, speed: 96.10st/s,  total loss: 259.4407796859741
+totalloss: 259.4407796859741
+gold_num =  2237  pred_num =  1894  right_num =  1255
+Dev: time: 3.30s, speed: 187.72st/s; acc: 0.8988, p: 0.6626, r: 0.5610, f: 0.6076
+gold_num =  2281  pred_num =  1902  right_num =  1231
+Test: time: 3.35s, speed: 174.48st/s; acc: 0.8937, p: 0.6472, r: 0.5397, f: 0.5886
+Epoch: 179/200
+     Instance: 2853; Time: 28.73s; loss: 258.3725; acc: 139506.0/163201.0=0.8548
+Epoch: 179 training finished. Time: 28.73s, speed: 99.32st/s,  total loss: 258.37254524230957
+totalloss: 258.37254524230957
+gold_num =  2237  pred_num =  1870  right_num =  1266
+Dev: time: 2.10s, speed: 295.32st/s; acc: 0.9102, p: 0.6770, r: 0.5659, f: 0.6165
+gold_num =  2281  pred_num =  1889  right_num =  1294
+Test: time: 2.22s, speed: 263.58st/s; acc: 0.9081, p: 0.6850, r: 0.5673, f: 0.6206
+Epoch: 180/200
+     Instance: 2853; Time: 23.81s; loss: 252.4662; acc: 140053.0/163201.0=0.8582
+Epoch: 180 training finished. Time: 23.81s, speed: 119.85st/s,  total loss: 252.4661545753479
+totalloss: 252.4661545753479
+gold_num =  2237  pred_num =  1640  right_num =  1175
+Dev: time: 2.11s, speed: 293.31st/s; acc: 0.9065, p: 0.7165, r: 0.5253, f: 0.6061
+gold_num =  2281  pred_num =  1689  right_num =  1218
+Test: time: 2.26s, speed: 258.66st/s; acc: 0.9038, p: 0.7211, r: 0.5340, f: 0.6136
+Epoch: 181/200
+     Instance: 2853; Time: 27.22s; loss: 247.7117; acc: 140223.0/163201.0=0.8592
+Epoch: 181 training finished. Time: 27.22s, speed: 104.81st/s,  total loss: 247.71169471740723
+totalloss: 247.71169471740723
+gold_num =  2237  pred_num =  1451  right_num =  1068
+Dev: time: 3.28s, speed: 188.60st/s; acc: 0.8974, p: 0.7360, r: 0.4774, f: 0.5792
+gold_num =  2281  pred_num =  1488  right_num =  1117
+Test: time: 3.32s, speed: 176.37st/s; acc: 0.9005, p: 0.7507, r: 0.4897, f: 0.5927
+Epoch: 182/200
+     Instance: 2853; Time: 28.73s; loss: 254.1697; acc: 139536.0/163201.0=0.8550
+Epoch: 182 training finished. Time: 28.73s, speed: 99.31st/s,  total loss: 254.16968059539795
+totalloss: 254.16968059539795
+gold_num =  2237  pred_num =  1891  right_num =  1261
+Dev: time: 2.10s, speed: 294.59st/s; acc: 0.9017, p: 0.6668, r: 0.5637, f: 0.6109
+gold_num =  2281  pred_num =  1860  right_num =  1219
+Test: time: 2.24s, speed: 261.14st/s; acc: 0.8985, p: 0.6554, r: 0.5344, f: 0.5887
+Epoch: 183/200
+     Instance: 2853; Time: 26.75s; loss: 261.7941; acc: 139329.0/163201.0=0.8537
+Epoch: 183 training finished. Time: 26.75s, speed: 106.65st/s,  total loss: 261.79408073425293
+totalloss: 261.79408073425293
+gold_num =  2237  pred_num =  1624  right_num =  1144
+Dev: time: 3.30s, speed: 187.93st/s; acc: 0.8997, p: 0.7044, r: 0.5114, f: 0.5926
+gold_num =  2281  pred_num =  1669  right_num =  1174
+Test: time: 3.34s, speed: 175.03st/s; acc: 0.9019, p: 0.7034, r: 0.5147, f: 0.5944
+Epoch: 184/200
+     Instance: 2853; Time: 29.37s; loss: 264.8805; acc: 139125.0/163201.0=0.8525
+Epoch: 184 training finished. Time: 29.37s, speed: 97.13st/s,  total loss: 264.88051891326904
+totalloss: 264.88051891326904
+gold_num =  2237  pred_num =  1645  right_num =  1168
+Dev: time: 3.29s, speed: 188.42st/s; acc: 0.8916, p: 0.7100, r: 0.5221, f: 0.6018
+gold_num =  2281  pred_num =  1650  right_num =  1154
+Test: time: 3.40s, speed: 172.07st/s; acc: 0.8878, p: 0.6994, r: 0.5059, f: 0.5871
+Epoch: 185/200
+     Instance: 2853; Time: 26.33s; loss: 287.6431; acc: 137020.0/163201.0=0.8396
+Epoch: 185 training finished. Time: 26.33s, speed: 108.35st/s,  total loss: 287.6430969238281
+totalloss: 287.6430969238281
+gold_num =  2237  pred_num =  1697  right_num =  1169
+Dev: time: 2.11s, speed: 293.99st/s; acc: 0.8991, p: 0.6889, r: 0.5226, f: 0.5943
+gold_num =  2281  pred_num =  1695  right_num =  1160
+Test: time: 2.22s, speed: 262.64st/s; acc: 0.8960, p: 0.6844, r: 0.5085, f: 0.5835
+Epoch: 186/200
+     Instance: 2853; Time: 25.90s; loss: 290.0109; acc: 138157.0/163201.0=0.8465
+Epoch: 186 training finished. Time: 25.90s, speed: 110.17st/s,  total loss: 290.0109405517578
+totalloss: 290.0109405517578
+gold_num =  2237  pred_num =  1831  right_num =  1122
+Dev: time: 3.30s, speed: 188.10st/s; acc: 0.8705, p: 0.6128, r: 0.5016, f: 0.5516
+gold_num =  2281  pred_num =  1866  right_num =  1160
+Test: time: 3.43s, speed: 170.76st/s; acc: 0.8798, p: 0.6217, r: 0.5085, f: 0.5594
+Epoch: 187/200
+     Instance: 2853; Time: 30.10s; loss: 284.6741; acc: 137915.0/163201.0=0.8451
+Epoch: 187 training finished. Time: 30.10s, speed: 94.77st/s,  total loss: 284.6741132736206
+totalloss: 284.6741132736206
+gold_num =  2237  pred_num =  1612  right_num =  1081
+Dev: time: 3.30s, speed: 187.75st/s; acc: 0.8902, p: 0.6706, r: 0.4832, f: 0.5617
+gold_num =  2281  pred_num =  1620  right_num =  1081
+Test: time: 3.39s, speed: 172.58st/s; acc: 0.8912, p: 0.6673, r: 0.4739, f: 0.5542
+Epoch: 188/200
+     Instance: 2853; Time: 35.39s; loss: 282.5361; acc: 138783.0/163201.0=0.8504
+Epoch: 188 training finished. Time: 35.39s, speed: 80.62st/s,  total loss: 282.5361337661743
+totalloss: 282.5361337661743
+gold_num =  2237  pred_num =  1903  right_num =  1231
+Dev: time: 2.28s, speed: 271.01st/s; acc: 0.8973, p: 0.6469, r: 0.5503, f: 0.5947
+gold_num =  2281  pred_num =  1955  right_num =  1276
+Test: time: 2.19s, speed: 267.45st/s; acc: 0.8981, p: 0.6527, r: 0.5594, f: 0.6025
+Epoch: 189/200
+     Instance: 2853; Time: 33.94s; loss: 273.2669; acc: 138199.0/163201.0=0.8468
+Epoch: 189 training finished. Time: 33.94s, speed: 84.07st/s,  total loss: 273.26689052581787
+totalloss: 273.26689052581787
+gold_num =  2237  pred_num =  1781  right_num =  1191
+Dev: time: 3.32s, speed: 186.52st/s; acc: 0.8881, p: 0.6687, r: 0.5324, f: 0.5928
+gold_num =  2281  pred_num =  1774  right_num =  1185
+Test: time: 3.46s, speed: 169.24st/s; acc: 0.8907, p: 0.6680, r: 0.5195, f: 0.5845
+Epoch: 190/200
+     Instance: 2853; Time: 35.80s; loss: 268.1326; acc: 139427.0/163201.0=0.8543
+Epoch: 190 training finished. Time: 35.80s, speed: 79.70st/s,  total loss: 268.13258171081543
+totalloss: 268.13258171081543
+gold_num =  2237  pred_num =  1730  right_num =  1219
+Dev: time: 3.32s, speed: 186.60st/s; acc: 0.9080, p: 0.7046, r: 0.5449, f: 0.6146
+gold_num =  2281  pred_num =  1757  right_num =  1197
+Test: time: 3.01s, speed: 193.50st/s; acc: 0.9052, p: 0.6813, r: 0.5248, f: 0.5929
+Epoch: 191/200
+     Instance: 2853; Time: 34.68s; loss: 267.0259; acc: 138569.0/163201.0=0.8491
+Epoch: 191 training finished. Time: 34.68s, speed: 82.28st/s,  total loss: 267.02589988708496
+totalloss: 267.02589988708496
+gold_num =  2237  pred_num =  1731  right_num =  1204
+Dev: time: 3.34s, speed: 185.63st/s; acc: 0.9044, p: 0.6956, r: 0.5382, f: 0.6069
+gold_num =  2281  pred_num =  1730  right_num =  1192
+Test: time: 2.85s, speed: 205.53st/s; acc: 0.8992, p: 0.6890, r: 0.5226, f: 0.5944
+Epoch: 192/200
+     Instance: 2853; Time: 34.85s; loss: 263.8937; acc: 138892.0/163201.0=0.8510
+Epoch: 192 training finished. Time: 34.85s, speed: 81.86st/s,  total loss: 263.8936891555786
+totalloss: 263.8936891555786
+gold_num =  2237  pred_num =  1764  right_num =  1200
+Dev: time: 3.31s, speed: 187.34st/s; acc: 0.9032, p: 0.6803, r: 0.5364, f: 0.5999
+gold_num =  2281  pred_num =  1809  right_num =  1236
+Test: time: 3.36s, speed: 173.48st/s; acc: 0.8989, p: 0.6833, r: 0.5419, f: 0.6044
+Epoch: 193/200
+     Instance: 2853; Time: 34.59s; loss: 270.8504; acc: 138966.0/163201.0=0.8515
+Epoch: 193 training finished. Time: 34.59s, speed: 82.47st/s,  total loss: 270.8504390716553
+totalloss: 270.8504390716553
+gold_num =  2237  pred_num =  1647  right_num =  1139
+Dev: time: 2.17s, speed: 285.11st/s; acc: 0.9023, p: 0.6916, r: 0.5092, f: 0.5865
+gold_num =  2281  pred_num =  1693  right_num =  1181
+Test: time: 2.23s, speed: 261.87st/s; acc: 0.9008, p: 0.6976, r: 0.5178, f: 0.5944
+Epoch: 194/200
+     Instance: 2853; Time: 35.80s; loss: 261.5650; acc: 139666.0/163201.0=0.8558
+Epoch: 194 training finished. Time: 35.80s, speed: 79.69st/s,  total loss: 261.56498527526855
+totalloss: 261.56498527526855
+gold_num =  2237  pred_num =  1750  right_num =  1177
+Dev: time: 3.32s, speed: 186.51st/s; acc: 0.9041, p: 0.6726, r: 0.5262, f: 0.5904
+gold_num =  2281  pred_num =  1746  right_num =  1187
+Test: time: 3.49s, speed: 167.75st/s; acc: 0.9002, p: 0.6798, r: 0.5204, f: 0.5895
+Epoch: 195/200
+     Instance: 2853; Time: 36.47s; loss: 255.7859; acc: 140171.0/163201.0=0.8589
+Epoch: 195 training finished. Time: 36.47s, speed: 78.23st/s,  total loss: 255.78588008880615
+totalloss: 255.78588008880615
+gold_num =  2237  pred_num =  1706  right_num =  1217
+Dev: time: 2.99s, speed: 206.09st/s; acc: 0.9021, p: 0.7134, r: 0.5440, f: 0.6173
+gold_num =  2281  pred_num =  1699  right_num =  1223
+Test: time: 2.19s, speed: 266.63st/s; acc: 0.8976, p: 0.7198, r: 0.5362, f: 0.6146
+Epoch: 196/200
+     Instance: 2853; Time: 34.90s; loss: 266.0125; acc: 138735.0/163201.0=0.8501
+Epoch: 196 training finished. Time: 34.90s, speed: 81.76st/s,  total loss: 266.01254749298096
+totalloss: 266.01254749298096
+gold_num =  2237  pred_num =  1515  right_num =  1083
+Dev: time: 3.32s, speed: 186.45st/s; acc: 0.9002, p: 0.7149, r: 0.4841, f: 0.5773
+gold_num =  2281  pred_num =  1579  right_num =  1105
+Test: time: 3.64s, speed: 160.76st/s; acc: 0.8974, p: 0.6998, r: 0.4844, f: 0.5725
+Epoch: 197/200
+     Instance: 2853; Time: 33.57s; loss: 264.9016; acc: 139189.0/163201.0=0.8529
+Epoch: 197 training finished. Time: 33.57s, speed: 84.99st/s,  total loss: 264.9015989303589
+totalloss: 264.9015989303589
+gold_num =  2237  pred_num =  1842  right_num =  1254
+Dev: time: 3.31s, speed: 187.03st/s; acc: 0.9059, p: 0.6808, r: 0.5606, f: 0.6149
+gold_num =  2281  pred_num =  1874  right_num =  1273
+Test: time: 3.40s, speed: 171.87st/s; acc: 0.9075, p: 0.6793, r: 0.5581, f: 0.6128
+Epoch: 198/200
+     Instance: 2853; Time: 32.82s; loss: 269.8495; acc: 138504.0/163201.0=0.8487
+Epoch: 198 training finished. Time: 32.82s, speed: 86.94st/s,  total loss: 269.84954833984375
+totalloss: 269.84954833984375
+gold_num =  2237  pred_num =  1915  right_num =  1269
+Dev: time: 3.32s, speed: 186.47st/s; acc: 0.8998, p: 0.6627, r: 0.5673, f: 0.6113
+gold_num =  2281  pred_num =  1924  right_num =  1255
+Test: time: 2.47s, speed: 236.75st/s; acc: 0.8954, p: 0.6523, r: 0.5502, f: 0.5969
+Epoch: 199/200
+     Instance: 2853; Time: 36.36s; loss: 274.2108; acc: 138834.0/163201.0=0.8507
+Epoch: 199 training finished. Time: 36.36s, speed: 78.47st/s,  total loss: 274.21076011657715
+totalloss: 274.21076011657715
+gold_num =  2237  pred_num =  1660  right_num =  1172
+Dev: time: 3.32s, speed: 186.36st/s; acc: 0.9038, p: 0.7060, r: 0.5239, f: 0.6015
+gold_num =  2281  pred_num =  1668  right_num =  1173
+Test: time: 3.47s, speed: 168.24st/s; acc: 0.8979, p: 0.7032, r: 0.5142, f: 0.5941
