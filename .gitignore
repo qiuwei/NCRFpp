@@ -1,2 +1,5 @@
 *.py[cod]
 __pycache__
+
+experiments
+sample_data

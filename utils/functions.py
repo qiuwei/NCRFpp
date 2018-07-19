@@ -127,7 +127,7 @@ def load_pretrain_emb(embedding_path):
     embedd_dict = dict()
     with open(embedding_path, 'r') as file:
         for line in file:
-            if line.startsiwth(' ') or line.startswith('　'):
+            if line.startswith(' ') or line.startswith('　'):
                 continue
             line = line.strip()
             if len(line) == 0:
