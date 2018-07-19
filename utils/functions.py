@@ -127,6 +127,8 @@ def load_pretrain_emb(embedding_path):
     embedd_dict = dict()
     with open(embedding_path, 'r') as file:
         for line in file:
+            if line.startsiwth(' ') or line.startswith('　'):
+                continue
             line = line.strip()
             if len(line) == 0:
                 continue
@@ -134,7 +136,7 @@ def load_pretrain_emb(embedding_path):
             if embedd_dim < 0:
                 embedd_dim = len(tokens) - 1
             else:
-                assert (embedd_dim + 1 == len(tokens))
+                assert (embedd_dim + 1 == len(tokens)), f"INCORRECT{line}"
             embedd = np.empty([1, embedd_dim])
             embedd[:] = tokens[1:]
             if sys.version_info[0] < 3:
