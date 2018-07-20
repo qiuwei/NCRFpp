@@ -1,0 +1,7 @@
+### Decode ###
+status=decode
+raw_dir=data/final_test_data/final_test_pos.txt
+nbest=1
+decode_dir=result/unfixed/expr1/finalpred.out
+dset_dir=experiments/unfixed/0/expr1/model.dset
+load_model_dir=experiments/unfixed/0/expr1/model.0.model
