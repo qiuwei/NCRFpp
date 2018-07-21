@@ -3,8 +3,8 @@
 # @Date:   2017-10-17 16:47:32
 # @Last Modified by:   Jie Yang,     Contact: jieynlp@gmail.com
 # @Last Modified time: 2018-04-26 14:50:58
-from utils.logging import print
 from __future__ import absolute_import
+from utils.logging import print
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence

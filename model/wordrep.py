@@ -3,8 +3,8 @@
 # @Date:   2017-10-17 16:47:32
 # @Last Modified by:   Jie Yang,     Contact: jieynlp@gmail.com
 # @Last Modified time: 2018-04-26 13:41:07
-from utils.logging import print
 from __future__ import absolute_import
+from utils.logging import print
 import torch
 import torch.nn as nn
 import numpy as np

@@ -4,8 +4,8 @@
 # @Last Modified by:   Jie Yang,     Contact: jieynlp@gmail.com
 # @Last Modified time: 2018-03-30 16:20:07
 
-from utils.logging import print
 from __future__ import absolute_import
+from utils.logging import print
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
