@@ -141,7 +141,7 @@ def recover_nbest_label(pred_variable, mask_variable, label_alphabet, word_recov
 
 def lr_decay(optimizer, epoch, decay_rate, init_lr):
     lr = init_lr/(1+decay_rate*epoch)
-    print(" Learning rate is setted as:", lr)
+    print(f" Learning rate is setted as: {lr}")
     for param_group in optimizer.param_groups:
         param_group['lr'] = lr
     return optimizer

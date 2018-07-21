@@ -445,7 +445,7 @@ if __name__ == '__main__':
     shutil.copy(args.config, expr_dir)
     status = data.status.lower()
     data.HP_gpu = torch.cuda.is_available()
-    print("Seed num:", seed_num)
+    print("Seed num: %s", seed_num)
 
     if status == 'train':
         print("MODEL: train")

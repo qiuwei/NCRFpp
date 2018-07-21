@@ -17,11 +17,11 @@ class SeqModel(nn.Module):
         super(SeqModel, self).__init__()
         self.use_crf = data.use_crf
         print("build network...")
-        print("use_char: ", data.use_char)
+        print("use_char: %s", data.use_char)
         if data.use_char:
-            print("char feature extractor: ", data.char_feature_extractor)
-        print("word feature extractor: ", data.word_feature_extractor)
-        print("use crf: ", self.use_crf)
+            print("char feature extractor: %s ", data.char_feature_extractor)
+        print("word feature extractor: %s", data.word_feature_extractor)
+        print("use crf: %s", self.use_crf)
 
         self.gpu = data.HP_gpu
         self.average_batch = data.average_batch_loss

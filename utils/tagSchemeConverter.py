@@ -14,7 +14,7 @@ import sys
 
 
 def BIO2BIOES(input_file, output_file):
-    print("Convert BIO -> BIOES for file:", input_file)
+    print("Convert BIO -> BIOES for file: %s", input_file)
     with open(input_file,'r') as in_file:
         fins = in_file.readlines()
     fout = open(output_file,'w')
@@ -46,12 +46,12 @@ def BIO2BIOES(input_file, output_file):
             words.append(pair[0])
             labels.append(pair[-1].upper())
     fout.close()
-    print("BIOES file generated:", output_file)
+    print("BIOES file generated: %s", output_file)
 
 
 
 def BIOES2BIO(input_file, output_file):
-    print("Convert BIOES -> BIO for file:", input_file)
+    print("Convert BIOES -> BIO for file: %s", input_file)
     with open(input_file,'r') as in_file:
         fins = in_file.readlines()
     fout = open(output_file,'w')
@@ -79,11 +79,11 @@ def BIOES2BIO(input_file, output_file):
             words.append(pair[0])
             labels.append(pair[-1].upper())
     fout.close()
-    print("BIO file generated:", output_file)
+    print("BIO file generated: %s", output_file)
 
 
 def IOB2BIO(input_file, output_file):
-    print("Convert IOB -> BIO for file:", input_file)
+    print("Convert IOB -> BIO for file: %s", input_file)
     with open(input_file,'r') as in_file:
         fins = in_file.readlines()
     fout = open(output_file,'w')
@@ -109,7 +109,7 @@ def IOB2BIO(input_file, output_file):
             words.append(pair[0])
             labels.append(pair[-1].upper())
     fout.close()
-    print("BIO file generated:", output_file)
+    print("BIO file generated: %s", output_file)
 
 
 def choose_label(input_file, output_file):

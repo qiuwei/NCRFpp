@@ -183,7 +183,7 @@ class Data:
                 feature_prefix = items[idx].split(']',1)[0]+"]"
                 self.feature_alphabets.append(Alphabet(feature_prefix))
                 self.feature_name.append(feature_prefix)
-                print("Find feature: ", feature_prefix)
+                print("Find feature: %s", feature_prefix)
         self.feature_num = len(self.feature_alphabets)
         self.pretrain_feature_embeddings = [None]*self.feature_num
         self.feature_emb_dims = [20]*self.feature_num
