@@ -8,6 +8,20 @@ from __future__ import absolute_import
 import sys
 import numpy as np
 
+def strF2H(ustring):
+    """full width to half width"""
+    rstring = ""
+    for uchar in ustring:
+        inside_code=ord(uchar)
+        if inside_code == 12288:                              #全角空格直接转换
+            inside_code = 32
+        elif (inside_code >= 65281 and inside_code <= 65374): #全角字符（除空格）根据关系转化
+            inside_code -= 65248
+
+        rstring += chr(inside_code)
+    return rstring
+
+
 def normalize_word(word):
     new_word = ""
     for char in word:
@@ -32,13 +46,18 @@ def read_instance(input_file, word_alphabet, char_alphabet, feature_alphabets, l
     char_Ids = []
     label_Ids = []
     for line in in_lines:
+        line = line.rstrip()
         if len(line) > 2:
-            pairs = line.strip().split()
+            pairs = line.split('\t')
 
             if sys.version_info[0] < 3:
                 word = pairs[0].decode('utf-8')
             else:
                 word = pairs[0]
+
+            word = strF2H(word)
+            if word == ' ':
+                word = '@' # no space in our embeddings
 
             if number_normalized:
                 word = normalize_word(word)

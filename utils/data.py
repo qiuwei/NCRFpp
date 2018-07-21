@@ -203,7 +203,9 @@ class Data:
         in_lines = open(input_file,'r').readlines()
         for line in in_lines:
             if len(line) > 2:
-                pairs = line.strip().split()
+                if line.startswith(' ') or line.startswith('　'):
+                    line[0] = '@' #space is replaced as @ in the embedding files
+                pairs = line.rstrip().split('\t')
                 word = pairs[0]
                 if self.number_normalized:
                     word = normalize_word(word)

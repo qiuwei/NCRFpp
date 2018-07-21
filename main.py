@@ -25,7 +25,7 @@ except ImportError:
     import pickle
 
 
-seed_num = 42
+seed_num = 9527
 random.seed(seed_num)
 torch.manual_seed(seed_num)
 np.random.seed(seed_num)
