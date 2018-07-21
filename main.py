@@ -439,7 +439,7 @@ if __name__ == '__main__':
     if not os.path.exists(expr_dir):
         os.makedirs(expr_dir)
 
-    logger.addHandler(logging.FileHandler(os.path.join(expr_dir, 'log'), 'a'))
+    logger.addHandler(logging.FileHandler(os.path.join(expr_dir, 'log'), 'w'))
 
     print("Copying your config in the experiment dir")
     shutil.copy(args.config, expr_dir)
