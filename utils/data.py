@@ -350,8 +350,12 @@ class Data:
         print("Predict %s %s-best result has been written into file. %s"%(name,nbest, self.decode_dir))
 
 
-    def read_config(self,config_file):
-        config = config_file_to_dict(config_file)
+    def read_config(self, config_file):
+        config = None
+        if isinstance(config_file, dict): # is not a dict but a file
+            config = config_file_to_dict(config_file)
+        else: # already a dict, make predict convenient
+            config = config_file
         ## read data:
         the_item = 'train_dir'
         if the_item in config:
