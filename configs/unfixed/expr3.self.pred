@@ -1,7 +1,0 @@
-### Decode ###
-status=decode
-raw_dir=data/final_data/0/test.txt.ncrf
-nbest=1
-decode_dir=result/unfixed/expr3/selfpred.out
-dset_dir=experiments/unfixed/0/expr3/model.dset
-load_model_dir=experiments/unfixed/0/expr3/model.0.model
