@@ -375,8 +375,10 @@ def train(data):
             else:
                 print("Exceed previous best acc score:", best_dev)
             model_name = data.model_dir +'.'+ str(idx) + ".model"
+            best_model_name = data.model_dir + ".best.model"
             print("Save current best model in file:", model_name)
             torch.save(model.state_dict(), model_name)
+            torch.save(model.state_dict(), best_model_name)
             best_dev = current_score
         # ## decode test
         speed, acc, p, r, f, _,_ = evaluate(data, model, "test")
