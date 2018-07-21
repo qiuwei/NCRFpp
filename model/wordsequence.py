@@ -45,7 +45,7 @@ class WordSequence(nn.Module):
             # cnn_hidden = data.HP_hidden_dim
             self.word2cnn = nn.Linear(self.input_size, data.HP_hidden_dim)
             self.cnn_layer = data.HP_cnn_layer
-            print("CNN layer: ", self.cnn_layer)
+            print("CNN layer: %s", self.cnn_layer)
             self.cnn_list = nn.ModuleList()
             self.cnn_drop_list = nn.ModuleList()
             self.cnn_batchnorm_list = nn.ModuleList()

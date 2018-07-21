@@ -56,7 +56,7 @@ def get_ner_fmeasure(golden_lists, predict_lists, label_type="BMES"):
         f_measure = 2*precision*recall/(precision+recall)
     accuracy = (right_tag+0.0)/all_tag
     # print "Accuracy: ", right_tag,"/",all_tag,"=",accuracy
-    print("gold_num = ", golden_num, " pred_num = ", predict_num, " right_num = ", right_num)
+    print(f"gold_num = {golden_num}, pred_num = {predict_num}, right_num = {right_num}")
     return accuracy, precision, recall, f_measure
 
 
