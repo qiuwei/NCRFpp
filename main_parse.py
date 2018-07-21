@@ -4,7 +4,7 @@
 # @Last Modified by:   Jie Yang,     Contact: jieynlp@gmail.com
 # @Last Modified time: 2018-06-16 16:52:14
 
-from __future__ import print_function
+from utils.logging import print
 import time
 import sys
 import argparse

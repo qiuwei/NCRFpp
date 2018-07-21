@@ -3,7 +3,7 @@
 # @Date:   2017-06-15 14:23:06
 # @Last Modified by:   Jie Yang,     Contact: jieynlp@gmail.com
 # @Last Modified time: 2018-06-10 17:49:50
-from __future__ import print_function
+from utils.logging import print
 from __future__ import absolute_import
 import sys
 import numpy as np

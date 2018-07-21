@@ -4,7 +4,7 @@
 # @Last Modified by:   Jie Yang,     Contact: jieynlp@gmail.com
 # @Last Modified time: 2018-03-30 16:20:07
 
-from __future__ import print_function
+from utils.logging import print
 from __future__ import absolute_import
 import torch
 import torch.nn as nn

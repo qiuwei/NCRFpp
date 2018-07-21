@@ -6,7 +6,7 @@
 
 # from operator import add
 #
-from __future__ import print_function
+from utils.logging import print
 import sys
 
 

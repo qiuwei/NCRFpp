@@ -3,7 +3,7 @@
 # @Date:   2017-06-14 17:34:32
 # @Last Modified by:   Jie Yang,     Contact: jieynlp@gmail.com
 # @Last Modified time: 2018-06-22 00:01:47
-from __future__ import print_function
+from utils.logging import print
 from __future__ import absolute_import
 import sys
 from .alphabet import Alphabet

@@ -3,7 +3,7 @@
 # @Date:   2017-10-17 16:47:32
 # @Last Modified by:   Jie Yang,     Contact: jieynlp@gmail.com
 # @Last Modified time: 2018-04-26 13:21:40
-from __future__ import print_function
+from utils.logging import print
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
