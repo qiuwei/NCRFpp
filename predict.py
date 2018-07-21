@@ -27,7 +27,7 @@ def main():
     data.read_config(config)
 
     data.HP_gpu = torch.cuda.is_available()
-    print("Seed num:", seed_num)
+    print("Seed num: %s", seed_num)
 
     if data.status == 'decode':
         print("MODEL: decode")

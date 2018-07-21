@@ -143,7 +143,7 @@ def recover_nbest_label(pred_variable, mask_variable, label_alphabet, word_recov
 
 def lr_decay(optimizer, epoch, decay_rate, init_lr):
     lr = init_lr/(1+decay_rate*epoch)
-    print(" Learning rate is setted as:", lr)
+    print(" Learning rate is setted as: %s", lr)
     for param_group in optimizer.param_groups:
         param_group['lr'] = lr
     return optimizer
@@ -160,7 +160,7 @@ def evaluate(data, model, name, nbest=None):
     elif name == 'raw':
         instances = data.raw_Ids
     else:
-        print("Error: wrong evaluate name,", name)
+        print("Error: wrong evaluate name, %s", name)
         exit(1)
     right_token = 0
     whole_token = 0
@@ -356,7 +356,7 @@ def train(data):
         epoch_finish = time.time()
         epoch_cost = epoch_finish - epoch_start
         print("Epoch: %s training finished. Time: %.2fs, speed: %.2fst/s,  total loss: %s"%(idx, epoch_cost, train_num/epoch_cost, total_loss))
-        print("totalloss:", total_loss)
+        print("totalloss:%s", total_loss)
         if total_loss > 1e8 or str(total_loss) == "nan":
             print("ERROR: LOSS EXPLOSION (>1e8) ! PLEASE SET PROPER PARAMETERS AND STRUCTURE! EXIT....")
             exit(1)
@@ -374,12 +374,12 @@ def train(data):
 
         if current_score > best_dev:
             if data.seg:
-                print("Exceed previous best f score:", best_dev)
+                print("Exceed previous best f score: %s", best_dev)
             else:
-                print("Exceed previous best acc score:", best_dev)
+                print("Exceed previous best acc score: %s", best_dev)
             model_name = data.model_dir +'.'+ str(idx) + ".model"
             best_model_name = data.model_dir + ".best.model"
-            print("Save current best model in file:", model_name)
+            print("Save current best model in file: %s", model_name)
             torch.save(model.state_dict(), model_name)
             torch.save(model.state_dict(), best_model_name)
             best_dev = current_score
@@ -395,7 +395,7 @@ def train(data):
 
 
 def load_model_decode(data, name):
-    print("Load Model from file: ", data.model_dir)
+    print("Load Model from file: %s", data.model_dir)
     model = SeqModel(data)
     ## load model need consider if the model trained in GPU and load in CPU, or vice versa
     # if not gpu:
@@ -429,7 +429,6 @@ if __name__ == '__main__':
     parser.add_argument('--config',  help='Configuration File' )
 
     args = parser.parse_args()
-    print(args)
     data = Data()
     data.read_config(args.config)
     # save the config in the model dir
