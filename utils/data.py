@@ -204,7 +204,7 @@ class Data:
         for line in in_lines:
             if len(line) > 2:
                 if line.startswith(' ') or line.startswith('　'):
-                    line[0] = '@' #space is replaced as @ in the embedding files
+                    line = '@' + line[1:] #space is replaced as @ in the embedding files
                 pairs = line.rstrip().split('\t')
                 word = pairs[0]
                 if self.number_normalized:
@@ -353,9 +353,9 @@ class Data:
     def read_config(self, config_file):
         config = None
         if isinstance(config_file, dict): # is not a dict but a file
-            config = config_file_to_dict(config_file)
-        else: # already a dict, make predict convenient
             config = config_file
+        else: # already a dict, make predict convenient
+            config = config_file_to_dict(config_file)
         ## read data:
         the_item = 'train_dir'
         if the_item in config:

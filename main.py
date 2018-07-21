@@ -429,10 +429,15 @@ if __name__ == '__main__':
     parser.add_argument('--config',  help='Configuration File' )
 
     args = parser.parse_args()
+    print(args)
     data = Data()
     data.read_config(args.config)
     # save the config in the model dir
-    expr_dir = os.path.dir(data.model_dir)
+    expr_dir = os.path.dirname(data.model_dir)
+    print(f"Experiment inside {expr_dir}")
+
+    if not os.path.exists(expr_dir):
+        os.makedirs(expr_dir)
 
     logger.addHandler(logging.FileHandler(os.path.join(expr_dir, 'log'), 'a'))
 
